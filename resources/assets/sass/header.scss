@@ -1,0 +1,59 @@
+.header {
+	width: 1024px;
+	height: $header-height;
+	background-color: $bg-color-dark;
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+	align-items: flex-end;
+}
+
+.header__title {
+	width: 25%;
+	flex: 1;
+	text-transform: uppercase;
+	border-bottom: $border-dark;
+
+	a {
+		text-decoration: none;
+		color: $color-main;
+		text-align: center;
+	}
+}
+
+.header__nav {
+	width: 75%;
+	flex: 3;
+
+	&-link {
+		height: 30px;
+		width: 25%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		list-style: none;
+		float: left;
+		text-decoration: none;
+		color: $color-main;
+
+		&:link, &:visited {
+			border-right: $border-dark;
+			border-bottom: $border-dark;
+			border-top: $border-dark;
+		}
+
+		&:first-child {
+			margin-left: -1px;
+			border-left: $border-dark;
+		}
+
+		&.active {
+
+			border-bottom: 1px solid $bg-color-main;
+			background-color: $bg-color-main;
+		}
+
+	}
+}

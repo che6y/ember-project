@@ -1,0 +1,24 @@
+.sidebar {
+	width: 25%;
+	background-color: $bg-color-dark;
+}
+
+.sidebar__nav {
+	padding: 10px 0 0 0;
+
+	&-link {
+		display: block;
+		padding: 5px 0 5px 20px;
+		color: $color-sidebar;
+		text-decoration: none;
+
+		&:hover, &:active {
+			text-decoration: underline;
+		}
+
+		&.active {
+			background-color: $bg-color-active;
+		}
+
+	}
+}
