@@ -13,6 +13,7 @@
 .header__title {
 	width: 25%;
 	flex: 1;
+	text-align: center;
 	text-transform: uppercase;
 	border-bottom: $border-dark;
 
@@ -49,8 +50,7 @@
 			border-left: $border-dark;
 		}
 
-		&.active {
-
+		&.router-link-active {
 			border-bottom: 1px solid $bg-color-main;
 			background-color: $bg-color-main;
 		}

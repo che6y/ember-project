@@ -1,4 +1,6 @@
 <?php
+use App\Work;
+use App\Skill;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,12 @@
 
 Route::get('/', function () {
     return view('vue');
+});
+Route::get('/skills', function () {
+    return App\Skill::all();
+});
+Route::get('/works', function () {
+    return App\Work::all();
 });
 
 Auth::routes();

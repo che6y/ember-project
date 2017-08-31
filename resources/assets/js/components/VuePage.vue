@@ -13,8 +13,13 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+        // mounted() {
+        //     console.log('Component mounted.')
+        // }
+				created() {
+					axios.get('/skills').then(response => {
+						console.log(response.data);
+					})
+				}
     }
 </script>
