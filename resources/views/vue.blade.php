@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <vue-page></vue-page>
+    <vue-page skills="{{ $skills }}" works="{{ $works }}"></vue-page>
 @endsection

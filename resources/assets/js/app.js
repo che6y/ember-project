@@ -31,7 +31,7 @@ const Contact = Vue.component('contact', require('./components/Contact.vue'));
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/about-me', component: AboutMe },
+  { path: '/about-me', component: AboutMe},
   { path: '/portfolio', component: Portfolio },
   { path: '/contact', component: Contact }
 ];

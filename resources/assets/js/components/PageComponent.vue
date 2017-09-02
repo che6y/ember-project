@@ -1,5 +1,10 @@
 <template>
 	<main class="main">
-			<router-view></router-view>
+			<router-view :skills="skills" :works="works"></router-view>
 	</main>
 </template>
+<script>
+	export default {
+		props: ['skills','works']
+	}
+</script>

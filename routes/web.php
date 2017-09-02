@@ -14,14 +14,16 @@ use App\Skill;
 */
 
 Route::get('/', function () {
-    return view('vue');
+    $skills = App\Skill::all();
+    $works = App\Work::all();
+    return view('vue', compact('skills', 'works'));
 });
-Route::get('/skills', function () {
-    return App\Skill::all();
-});
-Route::get('/works', function () {
-    return App\Work::all();
-});
+// Route::get('/skills', function () {
+//     return App\Skill::all();
+// });
+// Route::get('/works', function () {
+//     return App\Work::all();
+// });
 
 Auth::routes();
 

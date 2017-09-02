@@ -1734,20 +1734,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+	props: ['skills'],
 	data: function data() {
 		return {
-			message: "<p>Hello, my name is Anastasiia <br /> and I'm a frontend developer</p>",
-			skills: []
+			message: "Hello, my name is Anastasiia and I'm a frontend developer",
+			items: []
 		};
 	},
 	created: function created() {
-		var _this = this;
-
-		axios.get('/skills').then(function (response) {
-			_this.skills = response.data;
-		});
+		// axios.get('/skills').then(response => {
+		// 	this.skills = response.data;
+		// });
+		// console.log(this.fuu);
+		this.items = JSON.parse(this.skills);
+		// console.log(this.skills);
 	}
 });
 
@@ -1768,18 +1772,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	data: function data() {
-		return {
-			works: []
-		};
-	},
-	created: function created() {
-		var _this = this;
-
-		axios.get('/works').then(function (response) {
-			_this.works = response.data;
-		});
-	}
+		props: ['works'],
+		data: function data() {
+				return {
+						items: []
+				};
+		},
+		created: function created() {
+				// axios.get('/works').then(response => {
+				// 	this.works = response.data;
+				// });
+				this.items = JSON.parse(this.works);
+		}
 });
 
 /***/ }),
@@ -1803,14 +1807,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  // mounted() {
-  //     console.log('Component mounted.')
-  // }
-  created: function created() {
-    axios.get('/skills').then(function (response) {
-      console.log(response.data);
-    });
-  }
+	props: ['skills', 'works']
 });
 
 /***/ }),
@@ -31972,7 +31969,7 @@ module.exports = Component.exports
 
 var Component = __webpack_require__(1)(
   /* script */
-  null,
+  __webpack_require__(62),
   /* template */
   __webpack_require__(47),
   /* scopeId */
@@ -32126,7 +32123,12 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('main', {
     staticClass: "main"
-  }, [_c('router-view')], 1)
+  }, [_c('router-view', {
+    attrs: {
+      "skills": _vm.skills,
+      "works": _vm.works
+    }
+  })], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -32143,16 +32145,32 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "outlet"
-  }, [_c('p', {
-    domProps: {
-      "innerHTML": _vm._s(_vm.message)
-    }
-  }), _vm._v(" "), _c('br'), _vm._v("\n\t<h3>"), _c('span', {
+  }, [_c('div', [_c('span', {
+    staticClass: "tag-class"
+  }, [_vm._v("<h3>")]), _c('span', {
     staticClass: "h3"
-  }, [_vm._v("Skills")]), _vm._v("</h3>\n\t"), _c('ul', [_vm._v("\n\t\t<ul>\n\t\t"), _vm._l((_vm.skills), function(skill) {
-    return _c('li', [_vm._v(_vm._s('' + '<li>' + skill.title + '</li>'))])
-  }), _vm._v("\n\t\t</ul>\n\t")], 2)])
-},staticRenderFns: []}
+  }, [_vm._v(_vm._s(_vm.message))]), _c('span', {
+    staticClass: "tag-class"
+  }, [_vm._v("</h3>")])]), _vm._v(" "), _c('br'), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('ul', [_c('span', {
+    staticClass: "tag-class"
+  }, [_vm._v("<ul>")]), _vm._v(" "), _vm._l((_vm.items), function(item) {
+    return _c('li', [_c('span', {
+      staticClass: "tag-class"
+    }, [_vm._v("<li>")]), _vm._v(_vm._s(item.title)), _c('span', {
+      staticClass: "tag-class"
+    }, [_vm._v("</li>")])])
+  }), _vm._v(" "), _c('span', {
+    staticClass: "tag-class"
+  }, [_vm._v("</ul>")])], 2)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('span', {
+    staticClass: "tag-class"
+  }, [_vm._v("<h3>")]), _c('span', {
+    staticClass: "h3"
+  }, [_vm._v("Skills")]), _c('span', {
+    staticClass: "tag-class"
+  }, [_vm._v("</h3>")])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -32183,10 +32201,10 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "outlet"
-  }, _vm._l((_vm.works), function(work) {
+  }, _vm._l((_vm.items), function(item) {
     return _c('div', {
       staticClass: "portfolio_item"
-    }, [_c('p', [_vm._v(_vm._s(work.title))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(work.description))])])
+    }, [_c('p', [_vm._v(_vm._s(item.title))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(item.description))])])
   }))
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -32274,7 +32292,12 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container"
-  }, [_c('header-component'), _vm._v(" "), _c('sidebar-component'), _vm._v(" "), _c('page-component'), _vm._v(" "), _c('footer-component')], 1)
+  }, [_c('header-component'), _vm._v(" "), _c('sidebar-component'), _vm._v(" "), _c('page-component', {
+    attrs: {
+      "skills": _vm.skills,
+      "works": _vm.works
+    }
+  }), _vm._v(" "), _c('footer-component')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -44960,6 +44983,25 @@ module.exports = function(module) {
 __webpack_require__(9);
 module.exports = __webpack_require__(10);
 
+
+/***/ }),
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	props: ['skills', 'works']
+});
 
 /***/ })
 /******/ ]);

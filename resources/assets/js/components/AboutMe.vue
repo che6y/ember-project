@@ -1,28 +1,34 @@
 <template>
 	<div class="outlet">
-		<p v-html="message"></p>
+		<div><span class="tag-class">&lt;h3&gt;</span><span class="h3">{{ message }}</span><span class="tag-class">&lt;/h3&gt;</span>
+		</div>
 		<br>
-		&lt;h3&gt;<span class="h3">Skills</span>&lt;/h3&gt;
+		<div><span class="tag-class">&lt;h3&gt;</span><span class="h3">Skills</span><span class="tag-class">&lt;/h3&gt;</span></div>
 		<ul>
-			&lt;ul&gt;
-			<li v-for="skill in skills">{{ ''+'&lt;li&gt;' + skill.title + '&lt;/li&gt;' }}</li>
-			&lt;/ul&gt;
+			<span class="tag-class">&lt;ul&gt;</span>
+			<li v-for="item in items"><span class="tag-class">&lt;li&gt;</span>{{ item.title }}<span class="tag-class">&lt;/li&gt;</span></li>
+			<span class="tag-class">&lt;/ul&gt;</span>
 		</ul>
 	</div>
+
 </template>
 
 <script>
 export default {
+	props: ['skills'],
     data() {
         return {
-					message: "<p>Hello, my name is Anastasiia <br /> and I'm a frontend developer</p>",
-					skills: []
+					message: "Hello, my name is Anastasiia and I'm a frontend developer",
+					items: []
 				}
     },
 		created() {
-			axios.get('/skills').then(response => {
-				this.skills = response.data;
-			});
+			// axios.get('/skills').then(response => {
+			// 	this.skills = response.data;
+			// });
+			// console.log(this.fuu);
+			this.items = JSON.parse(this.skills);
+			// console.log(this.skills);
 		}
 }
 </script>
