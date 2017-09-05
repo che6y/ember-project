@@ -24,19 +24,20 @@ Vue.component('header-component', require('./components/HeaderComponent.vue'));
 Vue.component('sidebar-component', require('./components/SidebarComponent.vue'));
 Vue.component('page-component', require('./components/PageComponent.vue'));
 Vue.component('footer-component', require('./components/FooterComponent.vue'));
-const Home = Vue.component('home', require('./components/Home.vue'));
+// const Home = Vue.component('home', require('./components/Home.vue'));
 const AboutMe = Vue.component('about-me', require('./components/AboutMe.vue'));
 const Portfolio = Vue.component('portfolio', require('./components/Portfolio.vue'));
 const Contact = Vue.component('contact', require('./components/Contact.vue'));
 
 const routes = [
-  { path: '/', component: Home },
+  { path: '/', redirect: '/about-me'},
   { path: '/about-me', component: AboutMe},
   { path: '/portfolio', component: Portfolio },
   { path: '/contact', component: Contact }
 ];
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 });
 

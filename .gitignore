@@ -1,13 +1,15 @@
 /node_modules
 /public/hot
 /public/storage
+/public/abbakumovaCV.pdf
 /storage/*.key
 /vendor
 /.idea
 /.vagrant
+/routes/web.php
 Homestead.json
 Homestead.yaml
 npm-debug.log
-
+.env
 artisan
 server.php

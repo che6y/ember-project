@@ -1,7 +1,7 @@
 <template>
 	<header class="header">
 		<div class="header__title">
-				<h1><a href="/about-me">Abbakumova</a></h1>
+				<h1><a href="/">Abbakumova</a></h1>
 		</div>
 			<nav class="header__nav">
 				<router-link to="/about-me" class="header__nav-link">About me</router-link>

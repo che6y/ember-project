@@ -18,13 +18,21 @@ Route::get('/', function () {
     $works = App\Work::all();
     return view('vue', compact('skills', 'works'));
 });
+
+Route::get('/edit-about','SkillController@index');
+Route::get('/edit-portfolio','WorkController@index');
+Route::get('/edit-contact','ContactController@index');
+
 // Route::get('/skills', function () {
 //     return App\Skill::all();
 // });
 // Route::get('/works', function () {
 //     return App\Work::all();
 // });
+// Route::get('/home', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('home');
+Route::get('/adminka', 'HomeController@index')->name('home');

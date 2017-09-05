@@ -26,9 +26,8 @@ export default {
 			// axios.get('/skills').then(response => {
 			// 	this.skills = response.data;
 			// });
-			// console.log(this.fuu);
+
 			this.items = JSON.parse(this.skills);
-			// console.log(this.skills);
 		}
 }
 </script>
