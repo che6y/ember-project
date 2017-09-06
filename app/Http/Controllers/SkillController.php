@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use App\Skill;
+
 class SkillController extends Controller
 {
     /**
@@ -24,7 +26,7 @@ class SkillController extends Controller
      */
     public function index()
     {
-        $skills = DB::table('skills')->get()->toArray();
+        $skills = Skill::all();
         return view('edit-about', compact('skills'));
     }
 }

@@ -20,18 +20,12 @@ Route::get('/', function () {
 });
 
 Route::get('/edit-about','SkillController@index');
-Route::get('/edit-portfolio','WorkController@index');
-Route::get('/edit-contact','ContactController@index');
 
-// Route::get('/skills', function () {
-//     return App\Skill::all();
-// });
-// Route::get('/works', function () {
-//     return App\Work::all();
-// });
-// Route::get('/home', function () {
-//     return view('welcome');
-// });
+Route::get('/works','WorkController@index');
+Route::get('/works/create','WorkController@create');
+Route::post('/works/create','WorkController@create');
+
+Route::get('/edit-contact','ContactController@index');
 
 Auth::routes();
 

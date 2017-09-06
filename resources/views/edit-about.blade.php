@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-@if (Auth::check())
 @section('content')
 <div class="container admin-container">
 
@@ -14,4 +13,3 @@
 
 </div>
 @endsection
-@endif

@@ -12,7 +12,7 @@
     </div>
 
     <div class="admin-container_item">
-      <h3><a href="/edit-portfolio">Portfolio</a></h3>
+      <h3><a href="/works">Portfolio</a></h3>
     </div>
 
     <div class="admin-container_item">
