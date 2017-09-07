@@ -23,7 +23,8 @@ Route::get('/edit-about','SkillController@index');
 
 Route::get('/works','WorkController@index');
 Route::get('/works/create','WorkController@create');
-Route::post('/works/create','WorkController@create');
+Route::post('/works','WorkController@store');
+Route::get('/works/{$work}','WorkController@show');
 
 Route::get('/edit-contact','ContactController@index');
 

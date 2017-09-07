@@ -14,7 +14,7 @@ class WorkController extends Controller
      */
     public function index()
     {
-        $works = Work::all();
+        $works = Work::latest()->get();
 
         return view('work.index', compact('works'));
     }
@@ -35,9 +35,11 @@ class WorkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        Work::create(request(['title', 'description']));
+
+        return redirect('/works');
     }
 
     /**
@@ -46,9 +48,10 @@ class WorkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($work)
     {
-        //
+        return view('work.show', compact('work'));
+
     }
 
     /**
@@ -59,7 +62,10 @@ class WorkController extends Controller
      */
     public function edit($id)
     {
-        //
+
+      $work = Work::find($id);
+
+      return view('work.edit', compact('work'));
     }
 
     /**
@@ -71,7 +77,7 @@ class WorkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**

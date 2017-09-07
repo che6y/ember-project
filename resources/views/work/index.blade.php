@@ -9,7 +9,7 @@
 
   <div class="admin-container_items">
     @foreach ($works as $work)
-      <p>{{ $work->title }}</p>
+      <p><a href="/works/update/{{ $work->id }}">{{ $work->title }}</a></p>
     @endforeach
   </div>
 
