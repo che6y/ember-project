@@ -853,7 +853,6 @@ Vue.component('header-component', __webpack_require__(41));
 Vue.component('sidebar-component', __webpack_require__(44));
 Vue.component('page-component', __webpack_require__(42));
 Vue.component('footer-component', __webpack_require__(40));
-// const Home = Vue.component('home', require('./components/Home.vue'));
 var AboutMe = Vue.component('about-me', __webpack_require__(38));
 var Portfolio = Vue.component('portfolio', __webpack_require__(43));
 var Contact = Vue.component('contact', __webpack_require__(39));
@@ -1795,9 +1794,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				};
 		},
 		created: function created() {
-				// axios.get('/works').then(response => {
-				// 	this.works = response.data;
-				// });
 				this.items = JSON.parse(this.works);
 		}
 });
@@ -31831,7 +31827,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/Anastasiia_A/lavarel/sites/mySite/resources/assets/js/components/AboutMe.vue"
+Component.options.__file = "/Users/Anastasiia_A/laravel/sites/mySite/resources/assets/js/components/AboutMe.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] AboutMe.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -31865,7 +31861,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/Anastasiia_A/lavarel/sites/mySite/resources/assets/js/components/Contact.vue"
+Component.options.__file = "/Users/Anastasiia_A/laravel/sites/mySite/resources/assets/js/components/Contact.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Contact.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -31899,7 +31895,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/Anastasiia_A/lavarel/sites/mySite/resources/assets/js/components/FooterComponent.vue"
+Component.options.__file = "/Users/Anastasiia_A/laravel/sites/mySite/resources/assets/js/components/FooterComponent.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] FooterComponent.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -31933,7 +31929,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/Anastasiia_A/lavarel/sites/mySite/resources/assets/js/components/HeaderComponent.vue"
+Component.options.__file = "/Users/Anastasiia_A/laravel/sites/mySite/resources/assets/js/components/HeaderComponent.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] HeaderComponent.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -31967,7 +31963,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/Anastasiia_A/lavarel/sites/mySite/resources/assets/js/components/PageComponent.vue"
+Component.options.__file = "/Users/Anastasiia_A/laravel/sites/mySite/resources/assets/js/components/PageComponent.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] PageComponent.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -32001,7 +31997,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/Anastasiia_A/lavarel/sites/mySite/resources/assets/js/components/Portfolio.vue"
+Component.options.__file = "/Users/Anastasiia_A/laravel/sites/mySite/resources/assets/js/components/Portfolio.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Portfolio.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -32035,7 +32031,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/Anastasiia_A/lavarel/sites/mySite/resources/assets/js/components/SidebarComponent.vue"
+Component.options.__file = "/Users/Anastasiia_A/laravel/sites/mySite/resources/assets/js/components/SidebarComponent.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] SidebarComponent.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -32069,7 +32065,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/Anastasiia_A/lavarel/sites/mySite/resources/assets/js/components/VuePage.vue"
+Component.options.__file = "/Users/Anastasiia_A/laravel/sites/mySite/resources/assets/js/components/VuePage.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] VuePage.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -32136,7 +32132,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', [_c('span', {
     staticClass: "tag-class"
   }, [_vm._v("<h3>")]), _c('span', {
-    staticClass: "h3"
+    staticClass: "h4"
   }, [_vm._v(_vm._s(_vm.message))]), _c('span', {
     staticClass: "tag-class"
   }, [_vm._v("</h3>")])]), _vm._v(" "), _c('br'), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('ul', [_c('span', {
@@ -32154,7 +32150,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', [_c('span', {
     staticClass: "tag-class"
   }, [_vm._v("<h3>")]), _c('span', {
-    staticClass: "h3"
+    staticClass: "h4"
   }, [_vm._v("Skills")]), _c('span', {
     staticClass: "tag-class"
   }, [_vm._v("</h3>")])])
@@ -32180,7 +32176,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('p', [_c('span', {
       staticClass: "tag-class"
     }, [_vm._v("<h3>")]), _c('span', {
-      staticClass: "h3"
+      staticClass: "h4"
     }, [_vm._v(_vm._s(item.title))]), _c('span', {
       staticClass: "tag-class"
     }, [_vm._v("</h3>")])]), _vm._v(" "), _c('p', [_c('span', {
@@ -32212,17 +32208,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('nav', {
     staticClass: "header__nav row align-items-end"
   }, [_c('router-link', {
-    staticClass: "header__nav-link col-12 col-sm-3",
+    staticClass: "header__nav-link col-12 col-sm-4 col-md-3",
     attrs: {
       "to": "/about-me"
     }
   }, [_vm._v("About me")]), _vm._v(" "), _c('router-link', {
-    staticClass: "header__nav-link col-12 col-sm-3",
+    staticClass: "header__nav-link col-12 col-sm-4 col-md-3",
     attrs: {
       "to": "/portfolio"
     }
   }, [_vm._v("Portfolio")]), _vm._v(" "), _c('router-link', {
-    staticClass: "header__nav-link col-12 col-sm-3",
+    staticClass: "header__nav-link col-12 col-sm-4 col-md-3",
     attrs: {
       "to": "/contact"
     }
@@ -32259,7 +32255,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "tag-class"
   }, [_vm._v("<a href=\"mailto:myEemail\">")]), _c('a', {
     attrs: {
-      "href": "mailto:anastasiiadev@gmail.com"
+      "href": ""
     }
   }, [_vm._v("My email")]), _c('span', {
     staticClass: "tag-class"
@@ -32267,7 +32263,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "tag-class"
   }, [_vm._v("<a href=\"cv.pdf\" download>")]), _c('a', {
     attrs: {
-      "href": "/abbakumovaCV.pdf",
+      "href": "",
       "download": ""
     }
   }, [_vm._v("Download my CV")]), _c('span', {
@@ -32280,7 +32276,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "tag-class"
   }, [_vm._v("<img src=")]), _c('img', {
     attrs: {
-      "src": "https://www.codewars.com/users/che6y/badges/small",
+      "src": "",
       "alt": "code-wars-badge"
     }
   }), _c('span', {

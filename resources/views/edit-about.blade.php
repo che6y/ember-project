@@ -3,12 +3,17 @@
 @section('content')
 <div class="container admin-container">
 
-  <h2><a href="/adminka">Admin panel</a> &#187; about me</h2>
+  @include('layouts.aheader')
 
-  <div class="admin-container_items">
+  <div class="admin-container__outlet">
+
+    <?php echo Breadcrumbs::render('about'); ?>
+
     @foreach ($skills as $skill)
-      <p>{{ $skill->title }}</p>
+      <input class="form-control" type="text" value="{{ $skill->title }}">
+      <br>
     @endforeach
+
   </div>
 
 </div>

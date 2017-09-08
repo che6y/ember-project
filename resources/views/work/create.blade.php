@@ -3,10 +3,14 @@
 @section('content')
 <div class="container admin-container">
 
-  <h2><a href="/adminka">Admin panel</a> &#187; create work</h2>
+  @include('layouts.aheader')
 
-  <div class="admin-container_items">
+  <div class="admin-container__outlet">
+
+    <?php echo Breadcrumbs::render('create-work'); ?>
+
     <form method="POST" action="/works">
+
       {{ csrf_field() }}
 
       <div class="form-group">
@@ -19,7 +23,7 @@
         <input type="text" class="form-control" name="description">
       </div>
 
-      <button type="submit" class="btn btn-primary">Publish</button>
+      <button type="submit" class="btn btn-outline-success btn-sm">Publish</button>
 
     </form>
 

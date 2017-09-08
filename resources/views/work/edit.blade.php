@@ -3,24 +3,33 @@
 @section('content')
 <div class="container admin-container">
 
-  <h2><a href="/adminka">Admin panel</a> &#187; <small>edit</small> {{ $work->title }}</h2>
+  @include('layouts.aheader')
 
-  <form method="POST" action="/works">
-    {{ csrf_field() }}
+  <div class="admin-container__outlet">
 
-    <div class="form-group">
-      <label for="exampleInputEmail1">Title</label>
-      <input type="text" class="form-control" name="title" value="{{ $work->title }}">
-    </div>
+    <?php echo Breadcrumbs::render('work', $work); ?>
 
-    <div class="form-group">
-      <label for="exampleInputPassword1">Description</label>
-      <input type="text" class="form-control" name="description" value="{{ $work->description }}">
-    </div>
+    <form method="POST" action="/update-work/{{ $work->id }}">
 
-    <button type="submit" class="btn btn-primary">Publish</button>
+      {{ csrf_field() }}
 
-  </form>
+      {{ method_field('PUT') }}
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Title</label>
+        <input type="text" class="form-control" name="title" value="{{ $work->title }}">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Description</label>
+        <input type="text" class="form-control" name="description" value="{{ $work->description }}">
+      </div>
+
+      <button type="submit" class="btn btn-outline-success btn-sm">Update</button>
+
+    </form>
+
+  </div>
 
 </div>
 @endsection

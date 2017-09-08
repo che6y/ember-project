@@ -7,6 +7,16 @@ use App\Work;
 
 class WorkController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -48,9 +58,11 @@ class WorkController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($work)
+    public function show($id)
     {
-        return view('work.show', compact('work'));
+
+        // $work = Work::find($id);
+        // return view('work.show', compact('work'));
 
     }
 
@@ -77,6 +89,13 @@ class WorkController extends Controller
      */
     public function update(Request $request, $id)
     {
+      $work = Work::find($id);
+
+      $work->title = $request->title;
+      $work->description = $request->description;
+      $work->save();
+
+      return redirect('/works');
 
     }
 
@@ -88,6 +107,9 @@ class WorkController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // $work = Work::find($id);
+        Work::destroy($id);
+        return back();
+        // return redirect('/works');
     }
 }

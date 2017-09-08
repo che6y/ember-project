@@ -4,21 +4,48 @@
 @section('content')
 <div class="container admin-container">
 
-  <h2><a href="/adminka">Admin panel</a></h2>
+  @include('layouts.aheader')
 
-  <div class="admin-container_items">
-    <div class="admin-container_item">
-      <h3><a href="/edit-about">About me</a></h3>
-    </div>
+  <div class="admin-container__outlet">
 
-    <div class="admin-container_item">
-      <h3><a href="/works">Portfolio</a></h3>
-    </div>
+    <table class="table table-bordered">
 
-    <div class="admin-container_item">
-      <h3><a href="/edit-contact">Contact</a></h3>
-    </div>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Page</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>About me</td>
+          <td>
+            <a href="/edit-about"><button class="btn btn-outline-info btn-sm">Edit</button></a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Portfolio</td>
+          <td>
+            <a href="/works"><button class="btn btn-outline-info btn-sm">Edit</button></a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Contact</td>
+          <td>
+            <a href="/edit-contact"><button class="btn btn-outline-info btn-sm">Edit</button></a>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+
   </div>
+
 
 </div>
 @endsection

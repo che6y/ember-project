@@ -1,9 +1,9 @@
 <template>
 	<div class="outlet">
-		<div><span class="tag-class">&lt;h3&gt;</span><span class="h3">{{ message }}</span><span class="tag-class">&lt;/h3&gt;</span>
+		<div><span class="tag-class">&lt;h3&gt;</span><span class="h4">{{ message }}</span><span class="tag-class">&lt;/h3&gt;</span>
 		</div>
 		<br>
-		<div><span class="tag-class">&lt;h3&gt;</span><span class="h3">Skills</span><span class="tag-class">&lt;/h3&gt;</span></div>
+		<div><span class="tag-class">&lt;h3&gt;</span><span class="h4">Skills</span><span class="tag-class">&lt;/h3&gt;</span></div>
 		<ul>
 			<span class="tag-class">&lt;ul&gt;</span>
 			<li v-for="item in items"><span class="tag-class">&lt;li&gt;</span>{{ item.title }}<span class="tag-class">&lt;/li&gt;</span></li>
