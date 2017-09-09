@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Contact;
 
 class ContactController extends Controller
 {
@@ -21,8 +22,24 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function edit()
     {
-        return view('edit-contact');
+
+        $contact=Contact::first();
+
+        return view('edit-contact', compact('contact'));
+    }
+
+    public function update(Request $request)
+    {
+        $contact = Contact::first();
+
+        $contact->email = $request->email;
+        $contact->github = $request->github;
+        $contact->codewars = $request->codewars;
+
+        $contact->save();
+
+        return redirect('/adminka');
     }
 }

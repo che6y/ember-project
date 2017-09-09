@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Skill extends Model
+class Contact extends Model
 {
     public $timestamps = false;
-    protected $fillable = ['title', 'description'];
+
+		protected $fillable = ['email', 'github', 'codewars'];
 }

@@ -14,18 +14,27 @@ use App\Skill;
 */
 
 Route::get('/', function () {
-    $skills = App\Skill::all();
-    $works = App\Work::all();
+    $skills = Skill::orderBy('position')->get();
+    $works = Work::all();
     return view('vue', compact('skills', 'works'));
 });
 
-Route::get('/edit-about','SkillController@index');
+Route::get('/skills',['uses' => 'SkillController@index', 'as' => 'skills']);
+Route::get('/skills/create',['uses' => 'SkillController@create', 'as' => 'create-skill']);
+Route::post('/skills','SkillController@store');
+Route::get('/skills/edit/{id}',['uses' => 'SkillController@edit', 'as' => 'skill']);
+Route::put('/update-skill/{id}','SkillController@update');
+Route::delete('/delete-skill/{id}','SkillController@destroy');
 
-Route::get('/works','WorkController@index');
-Route::get('/works/create','WorkController@create');
-Route::post('/works/create','WorkController@create');
+Route::get('/works',['uses' => 'WorkController@index', 'as' => 'works']);
+Route::get('/works/create',['uses' => 'WorkController@create', 'as' => 'create-work']);
+Route::post('/works','WorkController@store');
+Route::get('/works/edit/{id}',['uses' => 'WorkController@edit', 'as' => 'work']);
+Route::put('/update-work/{id}','WorkController@update');
+Route::delete('/delete-work/{id}','WorkController@destroy');
 
-Route::get('/edit-contact','ContactController@index');
+Route::get('/edit-contact',['uses' => 'ContactController@edit', 'as' => 'edit-contact']);
+Route::put('/update-contact',['uses' => 'ContactController@update', 'as' => 'contact-update']);
 
 Auth::routes();
 

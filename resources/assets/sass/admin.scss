@@ -1,15 +1,18 @@
-@import "node_modules/bootstrap/scss/bootstrap";
 .admin-container {
 	display: block;
 	height: 720px;
 	background-color: $bg-color-main;
 
-	h2 {
-		text-transform: uppercase;
-		margin: 0 0 30px 0;
-		padding: 20px 15px;
+	& .header {
+		height: 50px;
+		width: auto;
+		padding: 10px 15px;
 		background-color: $bg-color-dark;
 		border-bottom: $border-dark;
+	}
+
+	&__outlet {
+		padding: 15px 0;
 	}
 
 	a {
@@ -21,10 +24,6 @@
 		}
 	}
 
-	&_items {
-		padding: 0 15px;
-	}
-
 	&_item {
 		display: block;
 		padding: 0 0 10px 0;
@@ -32,4 +31,21 @@
 		border-bottom: $border-dark;
 
 	}
+}
+
+.admin-breadcrumb {
+	width: fit-content;
+
+	li {
+		color: $color-tag;
+		list-style: none;
+		display: inline-block;
+		a {
+			color: $color-tag;
+		}
+	}
+}
+.delete-form,
+.edit-button {
+	display: inline-block;
 }

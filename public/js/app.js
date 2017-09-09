@@ -853,7 +853,6 @@ Vue.component('header-component', __webpack_require__(41));
 Vue.component('sidebar-component', __webpack_require__(44));
 Vue.component('page-component', __webpack_require__(42));
 Vue.component('footer-component', __webpack_require__(40));
-// const Home = Vue.component('home', require('./components/Home.vue'));
 var AboutMe = Vue.component('about-me', __webpack_require__(38));
 var Portfolio = Vue.component('portfolio', __webpack_require__(43));
 var Contact = Vue.component('contact', __webpack_require__(39));
@@ -1795,9 +1794,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				};
 		},
 		created: function created() {
-				// axios.get('/works').then(response => {
-				// 	this.works = response.data;
-				// });
 				this.items = JSON.parse(this.works);
 		}
 });
@@ -1808,6 +1804,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -32103,9 +32107,7 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('main', {
-    staticClass: "main"
-  }, [_c('router-view', {
+  return _c('div', [_c('router-view', {
     attrs: {
       "skills": _vm.skills,
       "works": _vm.works
@@ -32130,7 +32132,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', [_c('span', {
     staticClass: "tag-class"
   }, [_vm._v("<h3>")]), _c('span', {
-    staticClass: "h3"
+    staticClass: "h4"
   }, [_vm._v(_vm._s(_vm.message))]), _c('span', {
     staticClass: "tag-class"
   }, [_vm._v("</h3>")])]), _vm._v(" "), _c('br'), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('ul', [_c('span', {
@@ -32148,7 +32150,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', [_c('span', {
     staticClass: "tag-class"
   }, [_vm._v("<h3>")]), _c('span', {
-    staticClass: "h3"
+    staticClass: "h4"
   }, [_vm._v("Skills")]), _c('span', {
     staticClass: "tag-class"
   }, [_vm._v("</h3>")])])
@@ -32174,7 +32176,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('p', [_c('span', {
       staticClass: "tag-class"
     }, [_vm._v("<h3>")]), _c('span', {
-      staticClass: "h3"
+      staticClass: "h4"
     }, [_vm._v(_vm._s(item.title))]), _c('span', {
       staticClass: "tag-class"
     }, [_vm._v("</h3>")])]), _vm._v(" "), _c('p', [_c('span', {
@@ -32199,32 +32201,38 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('header', {
     staticClass: "header"
-  }, [_vm._m(0), _vm._v(" "), _c('nav', {
-    staticClass: "header__nav"
+  }, [_c('div', {
+    staticClass: "row align-items-end"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "col-sm-9 col-xs-12"
+  }, [_c('nav', {
+    staticClass: "header__nav row align-items-end"
   }, [_c('router-link', {
-    staticClass: "header__nav-link",
+    staticClass: "header__nav-link col-12 col-sm-4 col-md-3",
     attrs: {
       "to": "/about-me"
     }
   }, [_vm._v("About me")]), _vm._v(" "), _c('router-link', {
-    staticClass: "header__nav-link",
+    staticClass: "header__nav-link col-12 col-sm-4 col-md-3",
     attrs: {
       "to": "/portfolio"
     }
   }, [_vm._v("Portfolio")]), _vm._v(" "), _c('router-link', {
-    staticClass: "header__nav-link",
+    staticClass: "header__nav-link col-12 col-sm-4 col-md-3",
     attrs: {
       "to": "/contact"
     }
-  }, [_vm._v("Contact")])], 1)])
+  }, [_vm._v("Contact")])], 1)])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: "col-sm-3 col-xs-12"
+  }, [_c('div', {
     staticClass: "header__title"
-  }, [_c('h1', [_c('a', {
+  }, [_c('h2', [_c('a', {
     attrs: {
       "href": "/"
     }
-  }, [_vm._v("Abbakumova")])])])
+  }, [_vm._v("Abbakumova")])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -32247,7 +32255,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "tag-class"
   }, [_vm._v("<a href=\"mailto:myEemail\">")]), _c('a', {
     attrs: {
-      "href": "mailto:anastasiiadev@gmail.com"
+      "href": ""
     }
   }, [_vm._v("My email")]), _c('span', {
     staticClass: "tag-class"
@@ -32255,7 +32263,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "tag-class"
   }, [_vm._v("<a href=\"cv.pdf\" download>")]), _c('a', {
     attrs: {
-      "href": "/abbakumovaCV.pdf",
+      "href": "",
       "download": ""
     }
   }, [_vm._v("Download my CV")]), _c('span', {
@@ -32268,7 +32276,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "tag-class"
   }, [_vm._v("<img src=")]), _c('img', {
     attrs: {
-      "src": "https://www.codewars.com/users/che6y/badges/small",
+      "src": "",
       "alt": "code-wars-badge"
     }
   }), _c('span', {
@@ -32290,12 +32298,18 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container"
-  }, [_c('header-component'), _vm._v(" "), _c('sidebar-component'), _vm._v(" "), _c('page-component', {
+  }, [_c('header-component'), _vm._v(" "), _c('div', {
+    staticClass: "row "
+  }, [_c('div', {
+    staticClass: "col-sm-3 d-sm-block d-none"
+  }, [_c('sidebar-component')], 1), _vm._v(" "), _c('div', {
+    staticClass: "col-sm-9 col-xs-12 main"
+  }, [_c('page-component', {
     attrs: {
       "skills": _vm.skills,
       "works": _vm.works
     }
-  }), _vm._v(" "), _c('footer-component')], 1)
+  })], 1)]), _vm._v(" "), _c('footer-component')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

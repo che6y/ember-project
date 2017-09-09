@@ -1,7 +1,7 @@
 <template>
-	<main class="main">
+	<div>
 			<router-view :skills="skills" :works="works"></router-view>
-	</main>
+	</div>
 </template>
 <script>
 	export default {

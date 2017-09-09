@@ -1,22 +1,18 @@
 .header {
-	width: 1024px;
+	width: 100%;
 	height: $header-height;
-	background-color: $bg-color-dark;
-	display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-	align-items: flex-end;
+
 }
+	.header>.row {
+		height: 100%;
+		background-color: $bg-color-dark;
+		border-bottom: $border-dark;
+	}
 
 .header__title {
-	width: 25%;
-	flex: 1;
+
 	text-align: center;
 	text-transform: uppercase;
-	border-bottom: $border-dark;
-	padding: 0 0 5px 0;
 
 	a {
 		text-decoration: none;
@@ -27,23 +23,16 @@
 }
 
 .header__nav {
-	width: 75%;
-	flex: 3;
 
 	&-link {
 		height: 30px;
-		width: 25%;
-		display: flex;
-		align-items: flex-end;
-		justify-content: center;
-		list-style: none;
-		float: left;
-		text-decoration: none;
 		color: $color-main;
+		text-align: center;
+		text-decoration: none;
+		list-style: none;
 
 		&:link, &:visited {
 			border-right: $border-dark;
-			border-bottom: $border-dark;
 			border-top: $border-dark;
 		}
 
@@ -53,9 +42,14 @@
 		}
 
 		&.router-link-active {
-			border-bottom: 1px solid $bg-color-main;
+			border-bottom: 5px solid $bg-color-main;
 			background-color: $bg-color-main;
 		}
 
+	}
+}
+@media (max-width: 575px) {
+	.header {
+		height: 150px;
 	}
 }

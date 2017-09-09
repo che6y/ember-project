@@ -7,6 +7,16 @@ use App\Work;
 
 class WorkController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +24,7 @@ class WorkController extends Controller
      */
     public function index()
     {
-        $works = Work::all();
+        $works = Work::latest()->get();
 
         return view('work.index', compact('works'));
     }
@@ -35,20 +45,11 @@ class WorkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
-    }
+        Work::create(request(['title', 'description']));
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        return redirect('/works');
     }
 
     /**
@@ -59,7 +60,10 @@ class WorkController extends Controller
      */
     public function edit($id)
     {
-        //
+
+      $work = Work::find($id);
+
+      return view('work.edit', compact('work'));
     }
 
     /**
@@ -71,7 +75,14 @@ class WorkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $work = Work::find($id);
+
+      $work->title = $request->title;
+      $work->description = $request->description;
+      $work->save();
+
+      return redirect('/works');
+
     }
 
     /**
@@ -82,6 +93,9 @@ class WorkController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // $work = Work::find($id);
+        Work::destroy($id);
+        return back();
+        // return redirect('/works');
     }
 }
