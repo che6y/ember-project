@@ -14,12 +14,17 @@ use App\Skill;
 */
 
 Route::get('/', function () {
-    $skills = App\Skill::all();
-    $works = App\Work::all();
+    $skills = Skill::orderBy('position')->get();
+    $works = Work::all();
     return view('vue', compact('skills', 'works'));
 });
 
-Route::get('/edit-about',['uses' => 'SkillController@index', 'as' => 'edit-about']);
+Route::get('/skills',['uses' => 'SkillController@index', 'as' => 'skills']);
+Route::get('/skills/create',['uses' => 'SkillController@create', 'as' => 'create-skill']);
+Route::post('/skills','SkillController@store');
+Route::get('/skills/edit/{id}',['uses' => 'SkillController@edit', 'as' => 'skill']);
+Route::put('/update-skill/{id}','SkillController@update');
+Route::delete('/delete-skill/{id}','SkillController@destroy');
 
 Route::get('/works',['uses' => 'WorkController@index', 'as' => 'works']);
 Route::get('/works/create',['uses' => 'WorkController@create', 'as' => 'create-work']);

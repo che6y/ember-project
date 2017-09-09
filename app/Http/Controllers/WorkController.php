@@ -53,20 +53,6 @@ class WorkController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-
-        // $work = Work::find($id);
-        // return view('work.show', compact('work'));
-
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id

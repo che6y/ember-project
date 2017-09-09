@@ -5,12 +5,6 @@ Breadcrumbs::register('home', function ($breadcrumbs) {
     $breadcrumbs->push('Home', route('home'));
 });
 
-// Home > About
-Breadcrumbs::register('about', function ($breadcrumbs) {
-    $breadcrumbs->parent('home');
-    $breadcrumbs->push('About', route('edit-about'));
-});
-
 // Home > Contact
 Breadcrumbs::register('contact', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
@@ -35,4 +29,24 @@ Breadcrumbs::register('work', function ($breadcrumbs, $work) {
 Breadcrumbs::register('create-work', function ($breadcrumbs) {
     $breadcrumbs->parent('works');
     $breadcrumbs->push('Create new work', route('create-work'));
+});
+
+// Home > Skills
+Breadcrumbs::register('skills', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Skills', route('skills'));
+});
+
+
+// Home > Skills > [Skill]
+Breadcrumbs::register('skill', function ($breadcrumbs, $skill) {
+    $breadcrumbs->parent('skills');
+    $breadcrumbs->push('edit '. $skill->title, route('skill', $skill));
+});
+
+
+// Home > Skills > Create Skill
+Breadcrumbs::register('create-skill', function ($breadcrumbs) {
+    $breadcrumbs->parent('skills');
+    $breadcrumbs->push('Create new skill', route('create-skill'));
 });

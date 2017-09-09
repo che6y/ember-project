@@ -23,7 +23,7 @@
           <th scope="row">1</th>
           <td>About me</td>
           <td>
-            <a href="/edit-about"><button class="btn btn-outline-info btn-sm">Edit</button></a>
+            <a href="/skills"><button class="btn btn-outline-info btn-sm">Edit</button></a>
           </td>
         </tr>
         <tr>
