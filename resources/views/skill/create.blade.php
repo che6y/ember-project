@@ -15,19 +15,15 @@
 
       <div class="form-group">
 
-        <div class="row">
-
-          <div class="col-lg-6">
             <label for="skill-title">Title</label>
             <input type="text" class="form-control" id="skill-title" name="title">
-          </div>
 
-          <div class="col-lg-6">
+      </div>
+
+      <div class="form-group">
+
             <label for="skill-position">Position</label>
             <input type="number" class="form-control" id="skill-position" name="position">
-          </div>
-
-        </div>
 
       </div>
 

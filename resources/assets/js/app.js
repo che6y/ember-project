@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -10,6 +9,12 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import VueRouter from 'vue-router';
+import Vue from 'vue';
+import VueLazyLoad from 'vue-lazyload';
+import VueTouch from 'vue-touch';
+
+Vue.use(VueLazyLoad);
+Vue.use(VueTouch, { name: 'v-touch' });
 Vue.use(VueRouter);
 
 
@@ -24,6 +29,7 @@ Vue.component('header-component', require('./components/HeaderComponent.vue'));
 Vue.component('sidebar-component', require('./components/SidebarComponent.vue'));
 Vue.component('page-component', require('./components/PageComponent.vue'));
 Vue.component('footer-component', require('./components/FooterComponent.vue'));
+
 const AboutMe = Vue.component('about-me', require('./components/AboutMe.vue'));
 const Portfolio = Vue.component('portfolio', require('./components/Portfolio.vue'));
 const Contact = Vue.component('contact', require('./components/Contact.vue'));
@@ -41,5 +47,5 @@ const router = new VueRouter({
 });
 
 const app = new Vue({
-  router
+  router,
 }).$mount('#app');

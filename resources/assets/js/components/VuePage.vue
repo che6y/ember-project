@@ -9,10 +9,9 @@
 			</div>
 
 			<div class="col-sm-9 col-xs-12 main">
-				<page-component :skills="skills" :works="works"></page-component>
+				<page-component :skills="skills" :works="works" :contact="contact"></page-component>
 			</div>
 		</div>
-
 
 		<footer-component></footer-component>
 
@@ -21,6 +20,6 @@
 
 <script>
 	export default {
-		props: ['skills','works']
+		props: ['skills','works','contact']
 	}
 </script>

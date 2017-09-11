@@ -1,6 +1,7 @@
 <?php
 use App\Work;
 use App\Skill;
+use App\Contact;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,8 @@ use App\Skill;
 Route::get('/', function () {
     $skills = Skill::orderBy('position')->get();
     $works = Work::all();
-    return view('vue', compact('skills', 'works'));
+    $contact = Contact::first();
+    return view('vue', compact('skills', 'works','contact'));
 });
 
 Route::get('/skills',['uses' => 'SkillController@index', 'as' => 'skills']);

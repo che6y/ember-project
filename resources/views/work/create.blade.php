@@ -23,6 +23,11 @@
         <input type="text" class="form-control" name="description">
       </div>
 
+      <div class="form-group">
+        <label for="exampleInputPassword1">Download image</label>
+        <input type="file" class="form-control-file" name="image">
+      </div>
+
       <button type="submit" class="btn btn-outline-success btn-sm">Publish</button>
 
     </form>

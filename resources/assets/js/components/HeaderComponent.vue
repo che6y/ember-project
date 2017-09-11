@@ -10,10 +10,10 @@
 			</div>
 
 			<div class="col-sm-9 col-xs-12">
-				<nav class="header__nav row align-items-end">
-					<router-link to="/about-me" class="header__nav-link col-12 col-sm-4 col-md-3">About me</router-link>
-					<router-link to="/portfolio" class="header__nav-link col-12 col-sm-4 col-md-3">Portfolio</router-link>
-					<router-link to="/contact" class="header__nav-link col-12 col-sm-4 col-md-3">Contact</router-link>
+				<nav class="header__nav row ">
+						<router-link to="/about-me" class="header__nav-link col-12 col-sm-4 col-md-3">About me</router-link>
+						<router-link to="/portfolio" class="header__nav-link col-12 col-sm-4 col-md-3">Portfolio</router-link>
+						<router-link to="/contact" class="header__nav-link col-12 col-sm-4 col-md-3">Contact</router-link>
 				</nav>
 			</div>
 		</div>

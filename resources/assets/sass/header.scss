@@ -10,11 +10,14 @@
 	}
 
 .header__title {
-
 	text-align: center;
-	text-transform: uppercase;
+
+	h2 {
+		margin-bottom: 0;
+	}
 
 	a {
+		text-transform: uppercase;
 		text-decoration: none;
 		color: $color-main;
 		text-align: center;
@@ -26,26 +29,31 @@
 
 	&-link {
 		height: 30px;
-		color: $color-main;
 		text-align: center;
+		padding: 5px 0 0 0;
+		border-top: $border-dark;
+		border-right: $border-dark;
+		border-left: $border-dark;
+		border-radius: 25px 10px 0 0;
+		// border-right: $border-dark;
+		// border-top: $border-dark;
+		color: $color-main;
 		text-decoration: none;
-		list-style: none;
 
-		&:link, &:visited {
-			border-right: $border-dark;
-			border-top: $border-dark;
-		}
-
-		&:first-child {
-			margin-left: -1px;
-			border-left: $border-dark;
+		&:hover {
+			color: #fff;
+			text-decoration: none;
 		}
 
 		&.router-link-active {
-			border-bottom: 5px solid $bg-color-main;
+			// border-bottom: 5px solid $bg-color-main;
 			background-color: $bg-color-main;
 		}
 
+		// &:first-child {
+		// 	margin-left: -1px;
+		// 	border-left: $border-dark;
+		// }
 	}
 }
 @media (max-width: 575px) {

@@ -45,10 +45,20 @@ class WorkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        Work::create(request(['title', 'description']));
-
+//        var_dump($request);die;
+//        $file = $request->file('image')->store('/upload');
+//
+//        $filename = $file->extention;
+//
+        $work = new Work;
+//
+        $work->title = $request->title;
+        $work->description = $request->description;
+//        $work->image = $filename;
+        $work->save();
+//
         return redirect('/works');
     }
 
