@@ -45042,28 +45042,28 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "row align-items-end"
   }, [_vm._m(0), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-9 col-xs-12"
+    staticClass: "col-lg-9 col-md-8 col-sm-12"
   }, [_c('nav', {
-    staticClass: "header__nav row "
+    staticClass: "header__nav row"
   }, [_c('router-link', {
-    staticClass: "header__nav-link col-12 col-sm-4 col-md-3",
+    staticClass: "header__nav-link col-sm-4 col-md-4 col-lg-3",
     attrs: {
       "to": "/about-me"
     }
   }, [_vm._v("About me")]), _vm._v(" "), _c('router-link', {
-    staticClass: "header__nav-link col-12 col-sm-4 col-md-3",
+    staticClass: "header__nav-link col-sm-4 col-md-4 col-lg-3",
     attrs: {
       "to": "/portfolio"
     }
   }, [_vm._v("Portfolio")]), _vm._v(" "), _c('router-link', {
-    staticClass: "header__nav-link col-12 col-sm-4 col-md-3",
+    staticClass: "header__nav-link col-sm-4 col-md-4 col-lg-3",
     attrs: {
       "to": "/contact"
     }
   }, [_vm._v("Contact")])], 1)])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "col-sm-3 col-xs-12"
+    staticClass: "col-lg-3 col-md-4 col-sm-12"
   }, [_c('div', {
     staticClass: "header__title"
   }, [_c('h2', [_c('a', {
@@ -45147,11 +45147,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "container"
   }, [_c('header-component'), _vm._v(" "), _c('div', {
-    staticClass: "row "
+    staticClass: "row"
   }, [_c('div', {
-    staticClass: "col-sm-3 d-sm-block d-none"
+    staticClass: "col-lg-3 col-md-4 d-md-block d-none"
   }, [_c('sidebar-component')], 1), _vm._v(" "), _c('div', {
-    staticClass: "col-sm-9 col-xs-12 main"
+    staticClass: "col-lg-9 col-md-8 col-xs-12 main"
   }, [_c('page-component', {
     attrs: {
       "skills": _vm.skills,
@@ -45174,7 +45174,7 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "sidebar"
+    staticClass: "sidebar row"
   }, [_c('div', {
     staticClass: "sidebar__nav"
   }, [_c('router-link', {

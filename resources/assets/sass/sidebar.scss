@@ -4,6 +4,7 @@
 
 .sidebar__nav {
 	padding: 10px 0 0 0;
+	width: 100%;
 
 	&-link {
 		display: block;
@@ -12,11 +13,13 @@
 		text-decoration: none;
 
 		&:hover, &:active {
-			text-decoration: underline;
+			text-decoration: none;
+			color: $color-sidebar;
 		}
 
 		&.router-link-active {
 			background-color: $color-tag;
+
 		}
 
 	}

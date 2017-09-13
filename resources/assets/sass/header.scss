@@ -7,6 +7,7 @@
 		height: 100%;
 		background-color: $bg-color-dark;
 		border-bottom: $border-dark;
+		position: relative;
 	}
 
 .header__title {
@@ -26,6 +27,8 @@
 }
 
 .header__nav {
+	position: relative;
+	bottom: -2px;
 
 	&-link {
 		height: 30px;
@@ -34,9 +37,8 @@
 		border-top: $border-dark;
 		border-right: $border-dark;
 		border-left: $border-dark;
+		border-bottom: $border-dark;
 		border-radius: 25px 10px 0 0;
-		// border-right: $border-dark;
-		// border-top: $border-dark;
 		color: $color-main;
 		text-decoration: none;
 
@@ -46,18 +48,27 @@
 		}
 
 		&.router-link-active {
-			// border-bottom: 5px solid $bg-color-main;
 			background-color: $bg-color-main;
+			border-bottom: none;
 		}
-
-		// &:first-child {
-		// 	margin-left: -1px;
-		// 	border-left: $border-dark;
-		// }
 	}
 }
+
+@media (max-width: 767px) {
+	.header {
+		height: 65px;
+	}
+
+}
+
 @media (max-width: 575px) {
 	.header {
 		height: 150px;
 	}
+
+	.header__nav-link {
+		height: 35px;
+		border-radius: 0;
+	}
+
 }

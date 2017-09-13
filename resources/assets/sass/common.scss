@@ -33,7 +33,7 @@ ul > li {
 	max-height: 900px;
 	position: relative;
 	overflow: hidden;
-	margin: 100px auto 0 auto;
+	margin: 50px auto 0 auto;
 	background-color: $bg-color-dark;
 	border: $border-dark;
 	-webkit-border-radius: 4px;
@@ -56,4 +56,15 @@ ul > li {
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px grey;
+}
+
+@media (max-width: 575px) {
+	body {
+		font: $font-mobile;
+	}
+
+	.container {
+		margin: 0;
+		border-radius: 0;
+	}
 }
