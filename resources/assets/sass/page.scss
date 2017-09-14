@@ -40,8 +40,14 @@
 	}
 }
 @media (max-width: 575px) {
+
 	.main {
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
+
+	.tag-class {
+		display: none;
+	}
+
 }

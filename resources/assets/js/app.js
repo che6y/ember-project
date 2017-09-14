@@ -25,6 +25,7 @@ Vue.use(VueRouter);
  */
 
 Vue.component('vue-page', require('./components/VuePage.vue'));
+Vue.component('image-lightbox', require('./components/ImageLightbox.vue'));
 Vue.component('header-component', require('./components/HeaderComponent.vue'));
 Vue.component('sidebar-component', require('./components/SidebarComponent.vue'));
 Vue.component('page-component', require('./components/PageComponent.vue'));

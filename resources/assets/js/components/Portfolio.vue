@@ -4,35 +4,33 @@
 			<p><span class="tag-class">&lt;h3&gt;</span><span class="h4">{{ item.title }}</span><span class="tag-class">&lt;/h3&gt;</span></p>
 			<p><span class="tag-class">&lt;p&gt;</span>{{ item.description }}<span class="tag-class">&lt;/p&gt;</span></p>
 			<p>
-				<lightbox :images="images"></lightbox>
-				<!-- <span class="tag-class">&lt;img src= </span><img src="/uploads/SkiingInKamchatka.png" class="portfolio-img" /><span class="tag-class"> /&gt;</span> -->
+				<span class="tag-class">&lt;img src= </span><img @click="showModal = true" src="/uploads/SkiingInKamchatka.png" class="portfolio-img" /><span class="tag-class"> /&gt;</span>
 			</p>
+			<image-lightbox v-if="showModal" @close="showModal = false" :imageSrc="imageSrc">
+		    <!-- <h3 slot="header">custom header</h3> -->
+		  </image-lightbox>
 		</div>
 	</div>
 </template>
 
 <script>
-import Lightbox from 'vue-image-lightbox';
 
 export default {
 		props: ['works'],
-		components: {
-	    Lightbox,
-	  },
     data() {
         return {
+					showModal: false,
 					items: [],
-					images: [
-						  {
-						    thumb: 'http://127.0.0.1:8000/uploads/SkiingInKamchatka1.png',
-						    src: 'http://127.0.0.1:8000/uploads/SkiingInKamchatka.png',
-						    caption: 'Caption',
-						  }
-					]
+					imageSrc: '/uploads/SkiingInKamchatka.png'
 				}
     },
 		created() {
 			this.items = JSON.parse(this.works)
+		},
+		methods: {
+			imageClicked: function() {
+				console.log('Image clicked!');
+			}
 		}
 }
 </script>
