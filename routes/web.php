@@ -34,6 +34,8 @@ Route::post('/works','WorkController@store');
 Route::get('/works/edit/{id}',['uses' => 'WorkController@edit', 'as' => 'work']);
 Route::put('/update-work/{id}','WorkController@update');
 Route::delete('/delete-work/{id}','WorkController@destroy');
+Route::get('/works/upload-img/{id}',['uses' => 'WorkController@uploadImage', 'as' => 'upload-img']);
+Route::post('/save-img/{id}',['uses' => 'WorkController@saveImage', 'as' => 'save-img']);
 
 Route::get('/edit-contact',['uses' => 'ContactController@edit', 'as' => 'edit-contact']);
 Route::put('/update-contact',['uses' => 'ContactController@update', 'as' => 'contact-update']);

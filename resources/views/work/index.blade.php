@@ -28,7 +28,7 @@
           <th scope="row">{{ $i+1 }}</th>
           <td>{{ $works[$i]->title }}</td>
           <td>
-            <a href="#" class="edit-button"><button class="btn btn-outline-secondary btn-sm">Add photo</button></a>
+            <a href="/works/upload-img/{{ $works[$i]->id }}" class="edit-button"><button class="btn btn-outline-secondary btn-sm">Add photo</button></a>
             <a href="/works/edit/{{ $works[$i]->id }}" class="edit-button"><button class="btn btn-outline-info btn-sm">Edit</button></a>
             <form action="{{ url('/delete-work', ['id' => $works[$i]->id]) }}" method="POST" class="delete-form">
 

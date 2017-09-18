@@ -11941,7 +11941,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -11949,8 +11948,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	data: function data() {
 		return {
 			showModal: false,
-			items: [],
-			imageSrc: '/uploads/SkiingInKamchatka.png'
+			items: []
 		};
 	},
 	created: function created() {
@@ -11958,9 +11956,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	},
 
 	methods: {
-		imageClicked: function imageClicked() {
-			console.log('Image clicked!');
-		}
+		// imageClicked: function() {
+		// 	console.log('Image clicked!');
+		// }
 	}
 });
 
@@ -45016,7 +45014,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_vm._v("<img src= ")]), _c('img', {
       staticClass: "portfolio-img",
       attrs: {
-        "src": "/uploads/SkiingInKamchatka.png"
+        "src": /storage/ + item.image
       },
       on: {
         "click": function($event) {
@@ -45027,7 +45025,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: "tag-class"
     }, [_vm._v(" />")])]), _vm._v(" "), (_vm.showModal) ? _c('image-lightbox', {
       attrs: {
-        "imageSrc": _vm.imageSrc
+        "imageSrc": /storage/ + item.image
       },
       on: {
         "close": function($event) {
@@ -48077,6 +48075,35 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //

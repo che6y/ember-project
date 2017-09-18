@@ -4,10 +4,9 @@
 			<p><span class="tag-class">&lt;h3&gt;</span><span class="h4">{{ item.title }}</span><span class="tag-class">&lt;/h3&gt;</span></p>
 			<p><span class="tag-class">&lt;p&gt;</span>{{ item.description }}<span class="tag-class">&lt;/p&gt;</span></p>
 			<p>
-				<span class="tag-class">&lt;img src= </span><img @click="showModal = true" src="/uploads/SkiingInKamchatka.png" class="portfolio-img" /><span class="tag-class"> /&gt;</span>
+				<span class="tag-class">&lt;img src= </span><img @click="showModal = true" :src="/storage/+item.image" class="portfolio-img" /><span class="tag-class"> /&gt;</span>
 			</p>
-			<image-lightbox v-if="showModal" @close="showModal = false" :imageSrc="imageSrc">
-		    <!-- <h3 slot="header">custom header</h3> -->
+			<image-lightbox v-if="showModal" @close="showModal = false" :imageSrc="/storage/+item.image" >
 		  </image-lightbox>
 		</div>
 	</div>
@@ -20,17 +19,16 @@ export default {
     data() {
         return {
 					showModal: false,
-					items: [],
-					imageSrc: '/uploads/SkiingInKamchatka.png'
+					items: []
 				}
     },
 		created() {
 			this.items = JSON.parse(this.works)
 		},
 		methods: {
-			imageClicked: function() {
-				console.log('Image clicked!');
-			}
+			// imageClicked: function() {
+			// 	console.log('Image clicked!');
+			// }
 		}
 }
 </script>

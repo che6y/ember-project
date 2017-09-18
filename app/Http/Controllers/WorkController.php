@@ -103,9 +103,50 @@ class WorkController extends Controller
      */
     public function destroy($id)
     {
-        // $work = Work::find($id);
+
         Work::destroy($id);
         return back();
-        // return redirect('/works');
+
     }
+
+    /**
+     * Upload image for specific work post.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function uploadImage($id)
+    {
+        $work = Work::find($id);
+
+        return view('work.upload-img', compact('work'));
+    }
+
+    /**
+     * Upload image for specific work post.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function saveImage(Request $request, $id)
+    {
+        $work = Work::find($id);
+
+        $file = request()->file('file');
+
+        if (!empty($file)) {
+
+            $file->store('public');
+
+            $work->image = $file->hashName();
+            $work->save();
+
+            return redirect('/works');
+        } else {
+
+          return view('work.upload-img', compact('work'));
+
+        }
+    }
+
 }
