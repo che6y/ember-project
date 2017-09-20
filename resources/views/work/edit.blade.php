@@ -22,7 +22,8 @@
 
       <div class="form-group">
         <label for="edit-description">Description</label>
-        <input id="edit-description" type="text" class="form-control" name="description" value="{{ $work->description }}">
+        <!-- <input id="edit-description" type="text" class="form-control" name="description" value="{{ $work->description }}"> -->
+        <textarea id="edit-description" class="form-control" name="description" rows="8" cols="80" >{{ $work->description }}</textarea>
       </div>
 
       <button type="submit" class="btn btn-outline-success btn-sm">Update</button>
