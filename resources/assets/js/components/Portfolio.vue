@@ -1,14 +1,16 @@
 <template>
 	<div class="outlet">
+		<image-lightbox v-show="showModal" :imageSrc="imageSrc" @close="deselect">
+		</image-lightbox>
+
 		<div class="portfolio_item" v-for="item in items">
 			<p><span class="tag-class">&lt;h3&gt;</span><span class="h4">{{ item.title }}</span><span class="tag-class">&lt;/h3&gt;</span></p>
 			<p><span class="tag-class">&lt;p&gt;</span>{{ item.description }}<span class="tag-class">&lt;/p&gt;</span></p>
 			<p>
-				<span class="tag-class">&lt;img src= </span><img @click="showModal = true" :src="/storage/+item.image" class="portfolio-img" /><span class="tag-class"> /&gt;</span>
+				<span class="tag-class">&lt;img src= </span><img @click="selectItem(item)" :src="/storage/+item.image" class="portfolio-img" /><span class="tag-class"> /&gt;</span>
 			</p>
-			<image-lightbox v-if="showModal" @close="showModal = false" :imageSrc="/storage/+item.image" >
-		  </image-lightbox>
 		</div>
+
 	</div>
 </template>
 
@@ -19,16 +21,22 @@ export default {
     data() {
         return {
 					showModal: false,
-					items: []
+					items: [],
+					imageSrc: '',
 				}
     },
 		created() {
-			this.items = JSON.parse(this.works)
+			this.items = JSON.parse(this.works);
 		},
 		methods: {
-			// imageClicked: function() {
-			// 	console.log('Image clicked!');
-			// }
-		}
+			selectItem(item) {
+	      this.imageSrc = '/storage/' + item.image;
+	      this.showModal = true;
+	    },
+	    deselect() {
+	    	this.selectedItem = '';
+	      this.showModal = false;
+	    }
+		},
 }
 </script>

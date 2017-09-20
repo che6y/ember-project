@@ -11941,25 +11941,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['works'],
-	data: function data() {
-		return {
-			showModal: false,
-			items: []
-		};
-	},
-	created: function created() {
-		this.items = JSON.parse(this.works);
-	},
+		props: ['works'],
+		data: function data() {
+				return {
+						showModal: false,
+						items: [],
+						imageSrc: ''
+				};
+		},
+		created: function created() {
+				this.items = JSON.parse(this.works);
+		},
 
-	methods: {
-		// imageClicked: function() {
-		// 	console.log('Image clicked!');
-		// }
-	}
+		methods: {
+				selectItem: function selectItem(item) {
+						this.imageSrc = '/storage/' + item.image;
+						this.showModal = true;
+				},
+				deselect: function deselect() {
+						this.selectedItem = '';
+						this.showModal = false;
+				}
+		}
 });
 
 /***/ }),
@@ -44996,7 +45004,20 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "outlet"
-  }, _vm._l((_vm.items), function(item) {
+  }, [_c('image-lightbox', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.showModal),
+      expression: "showModal"
+    }],
+    attrs: {
+      "imageSrc": _vm.imageSrc
+    },
+    on: {
+      "close": _vm.deselect
+    }
+  }), _vm._v(" "), _vm._l((_vm.items), function(item) {
     return _c('div', {
       staticClass: "portfolio_item"
     }, [_c('p', [_c('span', {
@@ -45018,22 +45039,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       },
       on: {
         "click": function($event) {
-          _vm.showModal = true
+          _vm.selectItem(item)
         }
       }
     }), _c('span', {
       staticClass: "tag-class"
-    }, [_vm._v(" />")])]), _vm._v(" "), (_vm.showModal) ? _c('image-lightbox', {
-      attrs: {
-        "imageSrc": /storage/ + item.image
-      },
-      on: {
-        "close": function($event) {
-          _vm.showModal = false
-        }
-      }
-    }) : _vm._e()], 1)
-  }))
+    }, [_vm._v(" />")])])])
+  })], 2)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -45169,7 +45181,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "works": _vm.works,
       "contact": _vm.contact
     }
-  })], 1)]), _vm._v(" "), _c('footer-component')], 1)
+  })], 1)])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -48096,38 +48108,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+
 	props: ['imageSrc']
+
 });
 
 /***/ }),
