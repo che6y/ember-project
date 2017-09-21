@@ -16,7 +16,7 @@ use App\Contact;
 
 Route::get('/', function () {
     $skills = Skill::orderBy('position')->get();
-    $works = Work::all();
+    $works = Work::orderBy('id', 'desc')->get();
     $contact = Contact::first();
     return view('vue', compact('skills', 'works','contact'));
 });
