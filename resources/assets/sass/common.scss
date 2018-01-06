@@ -44,6 +44,25 @@ ul > li {
 	box-shadow: $shadow;
 }
 
+// .modal-body {
+	// height: 70%;
+	// width: 70%;
+	// display: flex;
+	// flex-flow: column;
+	// min-height: 432px;
+	// & img {
+	// 	min-height: 100%;
+	// 	min-width: 100%;
+	// }
+// }
+// .modal-mask {
+// 	bottom: 0;
+// 	right: 0;
+// 	overflow-y: auto;
+// 	transform: translate(0,0);
+// 	-webkit-overflow-scrolling: touch;
+// }
+
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -61,6 +80,7 @@ ul > li {
 @media (max-width: 575px) {
 	body {
 		font: $font-mobile;
+		line-height: 1.5;
 	}
 
 	.container {

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Upload image')
+
 @section('content')
 <div class="container admin-container">
 
@@ -25,6 +27,16 @@
 			@endif
 
       <button type="submit" class="btn btn-outline-success btn-sm">Save image</button>
+
+    </form>
+
+    <form action="{{ url('/delete-image', ['id' => $work->id]) }}" method="POST" class="delete-image-form">
+
+      {{ method_field('DELETE') }}
+
+      {{ csrf_field() }}
+
+      <button type="submit" class="btn btn-outline-danger btn-sm">Delete image</button>
 
     </form>
 

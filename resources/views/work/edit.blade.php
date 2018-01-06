@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Edite work')
+
 @section('content')
 <div class="container admin-container">
 
@@ -22,7 +24,6 @@
 
       <div class="form-group">
         <label for="edit-description">Description</label>
-        <!-- <input id="edit-description" type="text" class="form-control" name="description" value="{{ $work->description }}"> -->
         <textarea id="edit-description" class="form-control" name="description" rows="8" cols="80" >{{ $work->description }}</textarea>
       </div>
 
@@ -34,3 +35,13 @@
 
 </div>
 @endsection
+
+@section('pagescript')
+  <script src="/ckeditor/ckeditor.js"></script>
+  <script>
+    CKEDITOR.replace('description',{
+        language: 'ru',
+        uiColor: '#9da5b3'
+    });
+  </script>
+@stop

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@if (Auth::check())
+@section('title', 'Home')
+
 @section('content')
 <div class="container admin-container">
 
@@ -46,7 +47,5 @@
 
   </div>
 
-
 </div>
 @endsection
-@endif

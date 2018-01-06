@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Create work')
+
 @section('content')
 <div class="container admin-container">
 
@@ -31,3 +33,13 @@
 
 </div>
 @endsection
+
+@section('pagescript')
+  <script src="/ckeditor/ckeditor.js"></script>
+  <script>
+    CKEDITOR.replace('description',{
+        language: 'ru',
+        uiColor: '#9da5b3'
+    });
+  </script>
+@stop

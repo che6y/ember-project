@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Create skill')
+
 @section('content')
 <div class="container admin-container">
 

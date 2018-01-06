@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Work;
 
@@ -24,7 +25,7 @@ class WorkController extends Controller
      */
     public function index()
     {
-        $works = Work::latest()->get();
+        $works = Work::orderBy('id', 'desc')->get();
 
         return view('work.index', compact('works'));
     }
@@ -136,12 +137,36 @@ class WorkController extends Controller
 
         if (!empty($file)) {
 
+            if (!empty($work->image)) {
+              Storage::delete('public/'.$work->image);
+            }
+
             $file->store('public');
 
             $work->image = $file->hashName();
             $work->save();
 
             return redirect('/works');
+        } else {
+
+          return view('work.upload-img', compact('work'));
+
+        }
+    }
+
+    public function deleteImage($id)
+    {
+        $work = Work::find($id);
+
+        if (!empty($work->image)) {
+
+            Storage::delete('public/'.$work->image);
+
+            $work->image = '';
+            $work->save();
+
+            return redirect('/works');
+
         } else {
 
           return view('work.upload-img', compact('work'));

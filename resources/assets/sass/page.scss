@@ -26,7 +26,10 @@
 	}
 	.tag-class {
 		color: $color-tag;
+		padding: 0 5px;
+		text-shadow: 1px 0px rgba(256, 256, 256, 0.15);
 	}
+
 }
 
 .portfolio_item {
@@ -54,4 +57,12 @@
 		display: none;
 	}
 
+	.outlet ul {
+		margin: 0 0 0 30px;
+
+		li {
+			list-style-type: circle;
+			text-indent: 15px;
+		}
+	}
 }
