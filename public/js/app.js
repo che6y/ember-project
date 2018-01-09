@@ -12073,10 +12073,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				selectItem: function selectItem(item) {
 						this.imageSrc = '/storage/' + item.image;
 						this.showModal = true;
+						$('body').css('overflow', 'hidden');
 				},
 				deselect: function deselect() {
 						this.selectedItem = '';
 						this.showModal = false;
+						$('body').css('overflow', 'auto');
 				}
 		}
 });
@@ -42631,13 +42633,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }), _c('span', {
       staticClass: "tag-class"
-    }, [_vm._v("</p>")])]), _vm._v(" "), (item.image) ? _c('p', [_c('span', {
+    }, [_vm._v("</p>")])]), _vm._v(" "), (item.image) ? _c('div', [_c('span', {
       staticClass: "tag-class"
-    }, [_vm._v("<img src= ")]), _c('img', {
+    }, [_vm._v("<img src= ")]), _c('div', {
       staticClass: "portfolio-img",
-      attrs: {
-        "src": /storage/ + item.image
-      },
+      style: ({
+        'background-image': 'url(/storage/' + item.image + ')',
+        'background-size': 'cover',
+        'background-repeat': 'no-repeat',
+        'background-position': 'top center'
+      }),
       on: {
         "click": function($event) {
           _vm.selectItem(item)
