@@ -1,16 +1,14 @@
 .header {
+	display: grid;
+	grid-area: header;
+	align-items: center;
+	grid-template-columns: 250px auto;
 	width: 100%;
-	height: $header-height;
-
+	background-color: $bg-color-dark;
+	border-bottom: $border-dark;
 }
-	.header>.row {
-		height: 100%;
-		background-color: $bg-color-dark;
-		border-bottom: $border-dark;
-	}
 
 .header__title {
-
 	text-align: center;
 	text-transform: uppercase;
 
@@ -23,9 +21,11 @@
 }
 
 .header__nav {
+	align-self: end;
 
 	&-link {
 		height: 30px;
+		padding: 5px 7px 0px 7px;
 		color: $color-main;
 		text-align: center;
 		text-decoration: none;
@@ -37,7 +37,6 @@
 		}
 
 		&:first-child {
-			margin-left: -1px;
 			border-left: $border-dark;
 		}
 

@@ -1,9 +1,10 @@
 <template>
-	<div>
+	<div class="content">
 			<router-view :skills="skills" :works="works"></router-view>
 	</div>
 </template>
 <script>
+
 	export default {
 		props: ['skills','works']
 	}

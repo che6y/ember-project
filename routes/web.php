@@ -1,6 +1,4 @@
 <?php
-use App\Work;
-use App\Skill;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +11,7 @@ use App\Skill;
 |
 */
 
-Route::get('/', function () {
-    $skills = Skill::orderBy('position')->get();
-    $works = Work::all();
-    return view('vue', compact('skills', 'works'));
-});
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 
 Route::get('/skills',['uses' => 'SkillController@index', 'as' => 'skills']);
 Route::get('/skills/create',['uses' => 'SkillController@create', 'as' => 'create-skill']);
