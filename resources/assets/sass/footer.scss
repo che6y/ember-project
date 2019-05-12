@@ -1,9 +1,6 @@
 .footer {
+	grid-area: footer;
 	width: 100%;
-	height: 40px;
-	position: absolute;
-	left: 0;
-	bottom: 0;
 	background-color: $bg-color-dark;
 	box-sizing: border-box;
 	border: $border-dark;

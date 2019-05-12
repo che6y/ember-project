@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Work;
 
@@ -25,7 +24,7 @@ class WorkController extends Controller
      */
     public function index()
     {
-        $works = Work::orderBy('id', 'desc')->get();
+        $works = Work::latest()->get();
 
         return view('work.index', compact('works'));
     }
@@ -46,20 +45,10 @@ class WorkController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-//        var_dump($request);die;
-//        $file = $request->file('image')->store('/upload');
-//
-//        $filename = $file->extention;
-//
-        $work = new Work;
-//
-        $work->title = $request->title;
-        $work->description = $request->description;
-//        $work->image = $filename;
-        $work->save();
-//
+        Work::create(request(['title', 'description']));
+
         return redirect('/works');
     }
 
@@ -104,74 +93,9 @@ class WorkController extends Controller
      */
     public function destroy($id)
     {
-
+        // $work = Work::find($id);
         Work::destroy($id);
         return back();
-
+        // return redirect('/works');
     }
-
-    /**
-     * Upload image for specific work post.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function uploadImage($id)
-    {
-        $work = Work::find($id);
-
-        return view('work.upload-img', compact('work'));
-    }
-
-    /**
-     * Upload image for specific work post.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function saveImage(Request $request, $id)
-    {
-        $work = Work::find($id);
-
-        $file = request()->file('file');
-
-        if (!empty($file)) {
-
-            if (!empty($work->image)) {
-              Storage::delete('public/'.$work->image);
-            }
-
-            $file->store('public');
-
-            $work->image = $file->hashName();
-            $work->save();
-
-            return redirect('/works');
-        } else {
-
-          return view('work.upload-img', compact('work'));
-
-        }
-    }
-
-    public function deleteImage($id)
-    {
-        $work = Work::find($id);
-
-        if (!empty($work->image)) {
-
-            Storage::delete('public/'.$work->image);
-
-            $work->image = '';
-            $work->save();
-
-            return redirect('/works');
-
-        } else {
-
-          return view('work.upload-img', compact('work'));
-
-        }
-    }
-
 }

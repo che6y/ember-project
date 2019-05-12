@@ -1,11 +1,8 @@
-.main {
-	width: 100%;
+.content {
+	grid-area: content;
 	height: 100%;
 	min-height: 750px;
-	max-height: 751px;
 	padding-top: 10px;
-	padding-bottom: 10px;
-	overflow: auto;
 	border: $border-dark;
 	border-bottom: none;
 	border-top: none;
@@ -20,55 +17,18 @@
 	}
 }
 .outlet {
+	overflow: auto;
 
 	li {
     text-indent: 20px;
 	}
 	.tag-class {
 		color: $color-tag;
-		padding: 0 5px;
-		text-shadow: 1px 0px rgba(256, 256, 256, 0.15);
 	}
-
 }
 
 .portfolio_item {
 	padding: 0 0 10px 0;
-	border-bottom: 1px solid rgb(24, 26, 31);
+	border-bottom: 5px solid rgb(24, 26, 31);
 	margin: 0 0 15px 0;
-
-	&:last-child {
-		border-bottom: none;
-	}
-
-	& .portfolio-img {
-		display: inline-block;
-		height: 300px;
-		width: 400px;
-	}
-
-	// & img.portfolio-img {
-	// 	height: 300px;
-	// 	width: auto;
-	// }
-}
-@media (max-width: 575px) {
-
-	.main {
-		padding-top: 15px;
-		padding-bottom: 15px;
-	}
-
-	.tag-class {
-		display: none;
-	}
-
-	.outlet ul {
-		margin: 0 0 0 30px;
-
-		li {
-			list-style-type: circle;
-			text-indent: 15px;
-		}
-	}
 }

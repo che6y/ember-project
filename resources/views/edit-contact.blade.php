@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Contact')
-
 @if (Auth::check())
 @section('content')
 <div class="container admin-container">
@@ -34,10 +32,8 @@
       </div>
 
       <button type="submit" class="btn btn-outline-success btn-sm">Submit</button>
-      <a href="/adminka"><button type="button" name="button" class="btn btn-outline-secondary btn-sm">Back</button></a>
 
     </form>
-
 
   </div>
 

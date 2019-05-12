@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Create skill')
-
 @section('content')
 <div class="container admin-container">
 
@@ -17,15 +15,19 @@
 
       <div class="form-group">
 
+        <div class="row">
+
+          <div class="col-lg-6">
             <label for="skill-title">Title</label>
             <input type="text" class="form-control" id="skill-title" name="title">
+          </div>
 
-      </div>
-
-      <div class="form-group">
-
+          <div class="col-lg-6">
             <label for="skill-position">Position</label>
             <input type="number" class="form-control" id="skill-position" name="position">
+          </div>
+
+        </div>
 
       </div>
 

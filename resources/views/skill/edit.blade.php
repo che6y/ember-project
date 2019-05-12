@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Edit skill')
-
 @section('content')
 <div class="container admin-container">
 

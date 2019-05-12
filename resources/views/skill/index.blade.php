@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Skills')
-
 @section('content')
 <div class="container admin-container">
 
@@ -11,11 +9,7 @@
 
     <?php echo Breadcrumbs::render('skills'); ?>
 
-      <p>
-        <a href="/skills/create"><button type="button" name="button" class="btn btn-outline-info btn-sm">Add new</button></a>
-        <a href="/adminka"><button type="button" name="button" class="btn btn-outline-secondary btn-sm">Back</button></a>
-      </p>
-
+      <p><a href="/skills/create"><button type="button" name="button" class="btn btn-outline-secondary btn-sm">Add new</button></a></p>
 
       <table class="table table-bordered">
 

@@ -48,7 +48,6 @@ class SkillController extends Controller
      */
     public function store()
     {
-
         Skill::create(request(['title','position']));
 
         return redirect('skills');

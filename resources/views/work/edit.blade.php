@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Edite work')
-
 @section('content')
 <div class="container admin-container">
 
@@ -18,13 +16,13 @@
       {{ method_field('PUT') }}
 
       <div class="form-group">
-        <label for="edit-title">Title</label>
-        <input id="edit-title" type="text" class="form-control" name="title" value="{{ $work->title }}">
+        <label for="exampleInputEmail1">Title</label>
+        <input type="text" class="form-control" name="title" value="{{ $work->title }}">
       </div>
 
       <div class="form-group">
-        <label for="edit-description">Description</label>
-        <textarea id="edit-description" class="form-control" name="description" rows="8" cols="80" >{{ $work->description }}</textarea>
+        <label for="exampleInputPassword1">Description</label>
+        <input type="text" class="form-control" name="description" value="{{ $work->description }}">
       </div>
 
       <button type="submit" class="btn btn-outline-success btn-sm">Update</button>
@@ -35,13 +33,3 @@
 
 </div>
 @endsection
-
-@section('pagescript')
-  <script src="/ckeditor/ckeditor.js"></script>
-  <script>
-    CKEDITOR.replace('description',{
-        language: 'ru',
-        uiColor: '#9da5b3'
-    });
-  </script>
-@stop
