@@ -1,5 +1,5 @@
 <template>
-	<div class="outlet">
+	<div class="output">
 		<p><span class="tag-class">&lt;a href="mailto:myEemail"&gt;</span><a href="">My email</a><span class="tag-class">&lt;/a&gt;</span></p>
 
 		<br />

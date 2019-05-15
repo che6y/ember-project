@@ -128,15 +128,15 @@ img {
   text-decoration: underline;
 }
 
-.outlet {
+.output {
   overflow: auto;
 }
 
-.outlet li {
+.output li {
   text-indent: 20px;
 }
 
-.outlet .tag-class {
+.output .tag-class {
   color: #42505b;
 }
 

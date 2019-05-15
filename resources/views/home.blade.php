@@ -6,7 +6,7 @@
 
   @include('layouts.aheader')
 
-  <div class="admin-container__outlet">
+  <div class="admin-container__output">
 
     <table class="table table-bordered">
 

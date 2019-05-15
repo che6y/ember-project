@@ -1,5 +1,5 @@
 <template>
-	<div class="outlet">
+	<div class="output">
 		<div><span class="tag-class">&lt;h3&gt;</span><span class="h4">{{ message }}</span><span class="tag-class">&lt;/h3&gt;</span>
 		</div>
 		<br>

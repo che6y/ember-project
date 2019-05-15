@@ -5,7 +5,7 @@
 
   @include('layouts.aheader')
 
-  <div class="admin-container__outlet">
+  <div class="admin-container__output">
 
     <?php echo Breadcrumbs::render('create-work'); ?>
 
