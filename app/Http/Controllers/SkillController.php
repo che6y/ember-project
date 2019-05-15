@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\SkillsCollection;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-
 use App\Skill;
 
 class SkillController extends Controller
@@ -17,6 +16,19 @@ class SkillController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    /**
+     * Show All skills.
+     *
+     * @return SkillsCollection
+     */
+    public function frontIndex()
+    {
+        $skills = Skill::orderBy('created_at', 'desc')
+            ->get();
+
+        return new SkillsCollection($skills);
     }
 
     /**

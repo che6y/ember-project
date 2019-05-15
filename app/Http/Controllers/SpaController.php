@@ -10,9 +10,8 @@ use App\Contact;
 class SpaController extends Controller
 {
     public function index() {
-        $skills = Skill::orderBy('position')->get();
-        $works = Work::all();
-        $contact = Contact::first();
-        return view('vue', compact('skills', 'works', 'contact'));
+        $skills = base64_encode(json_encode(Skill::orderBy('position')->get()));
+        $works = base64_encode(json_encode(Work::all()));
+        return view('vue', compact('skills', 'works'));
     }
 }
