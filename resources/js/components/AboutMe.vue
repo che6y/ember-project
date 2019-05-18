@@ -33,3 +33,8 @@
         }
     }
 </script>
+<style scoped>
+	li {
+		text-indent: 20px;
+	}
+</style>

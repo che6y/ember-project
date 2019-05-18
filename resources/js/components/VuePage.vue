@@ -3,12 +3,12 @@
 
 		<header class="header">
 			<nav class="header__nav row align-items-end">
-				<button
-						v-for="tab in tabs"
-						v-bind:key="tab"
-						v-bind:class="['header__nav-link', { active: currentTab === tab }]"
-						v-on:click="currentTab = tab"
-				>{{ tab }}</button>
+				<a
+					v-for="tab in tabs"
+					v-bind:key="tab"
+					v-bind:class="['header__nav-link', { active: currentTab === tab }]"
+					v-on:click="currentTab = tab"
+				>{{ tab }}</a>
 			</nav>
 			<div class="header__title">
 				<h2><a href="/">Site Name</a></h2>
@@ -19,6 +19,7 @@
 				v-bind:is="currentTabComponent"
 				class="tab"
 				:skills="skills"
+				:works="works"
 		></component>
 
 		<footer class="footer"></footer>

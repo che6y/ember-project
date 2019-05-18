@@ -27,9 +27,9 @@ img {
 	display: grid;
 	min-width: 320px;
 	max-width: 1024px;
-	max-height: 900px;
+	height: 850px;
 	overflow: auto;
-	margin: auto;
+	margin: 50px auto;
 	background-color: $bg-color-dark;
 	border: $border-dark;
 	-webkit-border-radius: 4px;
@@ -39,12 +39,11 @@ img {
 	-moz-box-shadow: $shadow;
 	box-shadow: $shadow;
 
-	grid-template-columns: 250px;
 	grid-template-rows: $header-height auto $footer-height;
 	grid-template-areas:
-		"header header header"
-		"sidebar content content"
-		"footer footer footer";
+		"header"
+		"content"
+		"footer";
 }
 
 ::-webkit-scrollbar {

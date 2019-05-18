@@ -1,24 +1,14 @@
-.sidebar {
-	grid-area: sidebar;
-	background-color: $bg-color-dark;
-}
-
 .sidebar__nav {
-	padding: 10px 0 0 0;
 
 	&-link {
 		display: block;
-		padding: 5px 0 5px 20px;
+		padding: 5px 15px 5px 0;
+		text-indent: 0 !important;
 		color: $color-sidebar;
-		text-decoration: none;
+		cursor: pointer;
 
 		&:hover, &:active {
 			text-decoration: underline;
 		}
-
-		&.router-link-active {
-			background-color: $color-tag;
-		}
-
 	}
 }

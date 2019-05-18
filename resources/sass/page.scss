@@ -1,26 +1,10 @@
-.content {
-	grid-area: content;
-	height: 100%;
-	min-height: 750px;
-	padding-top: 10px;
-	border: $border-dark;
-	border-bottom: none;
-	border-top: none;
-	background-color: $bg-color-main;
-
-	& a {
-		color: $color-main;
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-}
 .output {
 	overflow: auto;
+	padding: 15px;
+	background-color: $bg-color-main;
 
 	li {
-    text-indent: 20px;
+		list-style: none;
 	}
 	.tag-class {
 		color: $color-tag;
@@ -28,7 +12,12 @@
 }
 
 .portfolio_item {
+	display: none;
 	padding: 0 0 10px 0;
 	border-bottom: 5px solid rgb(24, 26, 31);
 	margin: 0 0 15px 0;
+}
+.portfolio-output {
+	display: grid;
+	grid-template-columns: 200px auto;
 }
