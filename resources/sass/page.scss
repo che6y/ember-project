@@ -10,14 +10,34 @@
 		color: $color-tag;
 	}
 }
-
-.portfolio_item {
-	display: none;
-	padding: 0 0 10px 0;
-	border-bottom: 5px solid rgb(24, 26, 31);
-	margin: 0 0 15px 0;
-}
 .portfolio-output {
 	display: grid;
-	grid-template-columns: 200px auto;
+	grid-template-columns: 250px auto;
+
+	& .portfolio_item {
+		display: none;
+		margin: 15px;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	& .sidebar__nav {
+		height: 100%;
+		padding: 15px;
+		border-right: $border-dark;
+
+		&-link {
+			display: block;
+			padding: 10px 0;
+			color: $color-sidebar;
+			cursor: pointer;
+
+			&:hover, &:active {
+				text-decoration: underline;
+			}
+		}
+	}
 }
+

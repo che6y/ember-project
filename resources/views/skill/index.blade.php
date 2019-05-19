@@ -7,7 +7,7 @@
 
   <div class="admin-container__output">
 
-    <?php echo Breadcrumbs::render('skills'); ?>
+    <?php //echo Breadcrumbs::render('skills'); ?>
 
       <p><a href="/skills/create"><button type="button" name="button" class="btn btn-outline-secondary btn-sm">Add new</button></a></p>
 

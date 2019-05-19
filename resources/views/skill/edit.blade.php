@@ -7,7 +7,7 @@
 
   <div class="admin-container__output">
 
-    <?php echo Breadcrumbs::render('skill', $skill); ?>
+    <?php //echo Breadcrumbs::render('skill', $skill); ?>
 
     <form method="POST" action="/update-skill/{{ $skill->id }}">
 

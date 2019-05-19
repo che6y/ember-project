@@ -31,7 +31,7 @@
 		props: ['skills','works'],
 		data() {
 			return {
-				currentTab: 'About',
+				currentTab: 'Portfolio',
 				tabs: ['About', 'Portfolio', 'Contact']
 			}
 

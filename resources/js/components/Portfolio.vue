@@ -4,7 +4,7 @@
             <ul class="sidebar__nav">
                 <li
                     v-for="item in items"
-                    v-bind:class="['sidebar__nav-link', { active: currentTab === tab }]"
+                    v-bind:class="['sidebar__nav-link']"
                     v-on:click="openItem(item.id)"
                 >{{ item.title }}</li>
             </ul>
@@ -12,7 +12,7 @@
         <div class="portfolio_items">
             <portfolio-item
                 v-for="item in items"
-                v-bind:class="['portfolio_item', 'item-'+item.id]"
+                v-bind:class="['portfolio_item', 'item-'+item.id, { active: currentTab === 'item-' + item.id }]"
                 :item="item"
                 v-bind:key="item.id"
             ></portfolio-item>
@@ -34,7 +34,7 @@ export default {
             this.items =  JSON.parse(window.atob(this.works));
         },
         openItem( $id ){
-
+            this.currentTab = 'item-' + $id;
         }
     },
     created() {
@@ -42,3 +42,9 @@ export default {
     }
 }
 </script>
+<style scoped>
+
+    .output {
+        padding: 0;
+    }
+</style>
