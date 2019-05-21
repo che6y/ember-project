@@ -1,14 +1,9 @@
 <template>
 	<div class="output">
-		<div><span class="tag-class">&lt;h3&gt;</span><span class="h4">{{ message }}</span><span class="tag-class">&lt;/h3&gt;</span>
-		</div>
-		<br>
-		<div><span class="tag-class">&lt;h3&gt;</span><span class="h4">Skills</span><span class="tag-class">&lt;/h3&gt;</span></div>
+		<h4>{{ message }}</h4>
+		<h4>Skills:</h4>
 		<ul>
-			<span class="tag-class">&lt;ul&gt;</span>
-			<li v-for="item in items"><span class="tag-class">&lt;li&gt;</span>{{ item.title }}<span
-					class="tag-class">&lt;/li&gt;</span></li>
-			<span class="tag-class">&lt;/ul&gt;</span>
+			<li v-for="item in items">{{ item.title }}</li>
 		</ul>
 	</div>
 

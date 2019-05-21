@@ -1774,11 +1774,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['skills', 'works'],
   data: function data() {
@@ -1862,10 +1857,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
 //
 //
 //
@@ -37933,47 +37924,20 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "output" }, [
-    _c("div", [
-      _c("span", { staticClass: "tag-class" }, [_vm._v("<h3>")]),
-      _c("span", { staticClass: "h4" }, [_vm._v(_vm._s(_vm.message))]),
-      _c("span", { staticClass: "tag-class" }, [_vm._v("</h3>")])
-    ]),
+    _c("h4", [_vm._v(_vm._s(_vm.message))]),
     _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _vm._m(0),
+    _c("h4", [_vm._v("Skills:")]),
     _vm._v(" "),
     _c(
       "ul",
-      [
-        _c("span", { staticClass: "tag-class" }, [_vm._v("<ul>")]),
-        _vm._v(" "),
-        _vm._l(_vm.items, function(item) {
-          return _c("li", [
-            _c("span", { staticClass: "tag-class" }, [_vm._v("<li>")]),
-            _vm._v(_vm._s(item.title)),
-            _c("span", { staticClass: "tag-class" }, [_vm._v("</li>")])
-          ])
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "tag-class" }, [_vm._v("</ul>")])
-      ],
-      2
+      _vm._l(_vm.items, function(item) {
+        return _c("li", [_vm._v(_vm._s(item.title))])
+      }),
+      0
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("span", { staticClass: "tag-class" }, [_vm._v("<h3>")]),
-      _c("span", { staticClass: "h4" }, [_vm._v("Skills")]),
-      _c("span", { staticClass: "tag-class" }, [_vm._v("</h3>")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -38003,24 +37967,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "output" }, [
-      _c("p", [
-        _c("span", { staticClass: "tag-class" }, [
-          _vm._v('<a href="mailto:myEemail">')
-        ]),
-        _c("a", { attrs: { href: "" } }, [_vm._v("My email")]),
-        _c("span", { staticClass: "tag-class" }, [_vm._v("</a>")])
-      ]),
+      _c("p", [_c("a", { attrs: { href: "" } }, [_vm._v("My email")])]),
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
       _c("p", [
-        _c("span", { staticClass: "tag-class" }, [
-          _vm._v('<a href="cv.pdf" download>')
-        ]),
         _c("a", { attrs: { href: "", download: "" } }, [
           _vm._v("Download my CV")
-        ]),
-        _c("span", { staticClass: "tag-class" }, [_vm._v("</a>")])
+        ])
       ]),
       _vm._v(" "),
       _c("br")
@@ -38113,18 +38067,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("p", [
-      _c("span", { staticClass: "tag-class" }, [_vm._v("<h3>")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "h4" }, [_vm._v(_vm._s(_vm.item.title))]),
-      _vm._v(" "),
-      _c("span", { staticClass: "tag-class" }, [_vm._v("</h3>")])
+      _c("span", { staticClass: "h4" }, [_vm._v(_vm._s(_vm.item.title))])
     ]),
     _vm._v(" "),
-    _c("p", [
-      _c("span", { staticClass: "tag-class" }, [_vm._v("<p>")]),
-      _vm._v("\n        " + _vm._s(_vm.item.description) + "\n        "),
-      _c("span", { staticClass: "tag-class" }, [_vm._v("</p>")])
-    ])
+    _c("p", [_vm._v("\n        " + _vm._s(_vm.item.description) + "\n    ")])
   ])
 }
 var staticRenderFns = []
