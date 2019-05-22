@@ -12,10 +12,10 @@
 	}
 
 	&__output {
-		padding: 15px 0;
+		padding: 15px;
 	}
 
-	a {
+	& a {
 		text-decoration: none;
 		color: $color-main;
 
@@ -31,20 +31,56 @@
 		border-bottom: $border-dark;
 
 	}
-}
 
-.admin-breadcrumb {
-	width: fit-content;
+	& .grid-row {
+		display: grid;
+		grid-template-rows: 45px;
+		grid-template-columns: 15px 400px 105px;
+	}
 
-	li {
-		color: $color-tag;
-		list-style: none;
-		display: inline-block;
-		a {
+	& button {
+		padding: 5px 7px;
+	}
+
+	& .breadcrumb {
+		margin: 0 0 15px 0;
+
+		li {
 			color: $color-tag;
+			list-style: none;
+			display: inline;
+			a {
+				color: $color-tag;
+			}
+			&.active {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	& .add-new-item {
+		margin: 0 0 15px 0;
+	}
+	& .form-group {
+		margin: 0 0 15px 0;
+		width: 50%;
+
+		& label {
+			display: inline-block;
+			padding: 10px 0;
+		}
+
+		& input,
+		& textarea {
+			width: 100%;
+		}
+
+		& input {
+			height: 25px;
 		}
 	}
 }
+
 .delete-form,
 .edit-button {
 	display: inline-block;

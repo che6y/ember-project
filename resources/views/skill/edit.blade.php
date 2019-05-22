@@ -7,7 +7,7 @@
 
   <div class="admin-container__output">
 
-    <?php //echo Breadcrumbs::render('skill', $skill); ?>
+    <?php echo Breadcrumbs::render('skill', $skill); ?>
 
     <form method="POST" action="/update-skill/{{ $skill->id }}">
 
@@ -33,7 +33,7 @@
 
       </div>
 
-      <button type="submit" class="btn btn-outline-success btn-sm">Update</button>
+      <button type="submit" class="btn  ">Update</button>
 
     </form>
 

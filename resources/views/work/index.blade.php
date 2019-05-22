@@ -9,41 +9,36 @@
 
     <?php echo Breadcrumbs::render('works'); ?>
 
-    <p><a href="/works/create"><button type="button" name="button" class="btn btn-outline-secondary btn-sm">Add new</button></a></p>
+    <div class="add-new-item">
+        <a href="/works/create">
+            <button type="button" name="button">Add new</button>
+        </a>
+    </div>
 
-    <table class="table table-bordered">
+    <div class="grid-row">
+        <div>#</div>
+        <div>Title</div>
+        <div>Action</div>
+    </div>
 
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Title</th>
-          <th>Action</th>
-        </tr>
-      </thead>
+    @for ( $i = 0; $i < count($works); ++$i )
+    <div class="grid-row">
+      <div>{{ $i+1 }}</div>
+      <div>{{ $works[$i]->title }}</div>
+      <div>
+        <a href="/works/edit/{{ $works[$i]->id }}" class="edit-button"><button class="btn  ">Edit</button></a>
+        <form action="{{ url('/delete-work', ['id' => $works[$i]->id]) }}" method="POST" class="delete-form">
 
-      <tbody>
+            {{ method_field('DELETE') }}
 
-        @for ($i=0; $i<count($works); ++$i)
-        <tr>
-          <th scope="row">{{ $i+1 }}</th>
-          <td>{{ $works[$i]->title }}</td>
-          <td>
-            <a href="/works/edit/{{ $works[$i]->id }}" class="edit-button"><button class="btn btn-outline-info btn-sm">Edit</button></a>
-            <form action="{{ url('/delete-work', ['id' => $works[$i]->id]) }}" method="POST" class="delete-form">
+            {{ csrf_field() }}
 
-                {{ method_field('DELETE') }}
+            <button type="submit" class="btn  ">Delete</button>
 
-                {{ csrf_field() }}
-
-                <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
-
-            </form>
-          </td>
-        </tr>
-        @endfor
-
-      </tbody>
-    </table>
+        </form>
+      </div>
+    </div>
+    @endfor
 
   </div>
 

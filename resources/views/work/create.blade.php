@@ -23,7 +23,7 @@
         <input type="text" class="form-control" name="description">
       </div>
 
-      <button type="submit" class="btn btn-outline-success btn-sm">Publish</button>
+      <button type="submit" class="btn  ">Publish</button>
 
     </form>
 

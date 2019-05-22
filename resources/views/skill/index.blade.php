@@ -7,9 +7,15 @@
 
   <div class="admin-container__output">
 
-    <?php //echo Breadcrumbs::render('skills'); ?>
+    <?php echo Breadcrumbs::render('skills'); ?>
 
-      <p><a href="/skills/create"><button type="button" name="button" class="btn btn-outline-secondary btn-sm">Add new</button></a></p>
+      <div>
+        <a href="/skills/create">
+          <button type="button" name="button" class="btn btn-outline-secondary btn-sm">
+            Add new
+          </button>
+        </a>
+      </div>
 
       <table class="table table-bordered">
 
@@ -30,14 +36,14 @@
             <td>{{ $skills[$i]->title }}</td>
             <td>{{ $skills[$i]->position }}</td>
             <td>
-              <a href="/skills/edit/{{ $skills[$i]->id }}" class="edit-button"><button class="btn btn-outline-info btn-sm">Edit</button></a>
+              <a href="/skills/edit/{{ $skills[$i]->id }}" class="edit-button"><button class="btn  ">Edit</button></a>
               <form action="{{ url('/delete-skill', ['id' => $skills[$i]->id]) }}" method="POST" class="delete-form">
 
                 {{ method_field('DELETE') }}
 
                 {{ csrf_field() }}
 
-                <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                <button type="submit" class="btn  ">Delete</button>
 
               </form>
             </td>

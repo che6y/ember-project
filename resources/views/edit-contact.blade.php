@@ -31,7 +31,7 @@
         <input type="text" class="form-control" id="my-codewars" name="codewars" value="{{ $contact->codewars }}">
       </div>
 
-      <button type="submit" class="btn btn-outline-success btn-sm">Submit</button>
+      <button type="submit" class="btn  ">Submit</button>
 
     </form>
 

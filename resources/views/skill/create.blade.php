@@ -7,7 +7,7 @@
 
   <div class="admin-container__output">
 
-    <?php //echo Breadcrumbs::render('create-skill'); ?>
+    <?php echo Breadcrumbs::render('create-skill'); ?>
 
     <form method="POST" action="/skills">
 
@@ -31,7 +31,7 @@
 
       </div>
 
-      <button type="submit" class="btn btn-outline-success btn-sm">Publish</button>
+      <button type="submit" class="btn  ">Publish</button>
 
     </form>
 

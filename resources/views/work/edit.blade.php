@@ -16,16 +16,16 @@
       {{ method_field('PUT') }}
 
       <div class="form-group">
-        <label for="exampleInputEmail1">Title</label>
+        <label for="exampleInputEmail1">Title</label><br />
         <input type="text" class="form-control" name="title" value="{{ $work->title }}">
       </div>
 
       <div class="form-group">
-        <label for="exampleInputPassword1">Description</label>
-        <input type="text" class="form-control" name="description" value="{{ $work->description }}">
+        <label for="exampleInputPassword1">Description</label><br />
+        <textarea type="text" class="form-control" name="description" rows="5" cols="33">{{ $work->description }}</textarea>
       </div>
 
-      <button type="submit" class="btn btn-outline-success btn-sm">Update</button>
+      <button type="submit" class="btn">Update</button>
 
     </form>
 

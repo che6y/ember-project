@@ -8,41 +8,33 @@
 
   <div class="admin-container__output">
 
-    <table class="table table-bordered">
+      <div class="grid-row">
+        <div>#</div>
+        <div>Page</div>
+        <div>Action</div>
+      </div>
 
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Page</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>About me</td>
-          <td>
-            <a href="/skills"><button class="btn btn-outline-info btn-sm">Edit</button></a>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Portfolio</td>
-          <td>
-            <a href="/works"><button class="btn btn-outline-info btn-sm">Edit</button></a>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Contact</td>
-          <td>
-            <a href="/edit-contact"><button class="btn btn-outline-info btn-sm">Edit</button></a>
-          </td>
-        </tr>
-      </tbody>
-
-    </table>
+      <div class="grid-row">
+          <div scope="row">1</div>
+          <div>About me</div>
+          <div>
+            <a href="/skills"><button class="btn">Edit</button></a>
+          </div>
+      </div>
+      <div class="grid-row">
+        <div scope="row">2</div>
+        <div>Portfolio</div>
+        <div>
+          <a href="/works"><button class="btn">Edit</button></a>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div scope="row">3</div>
+        <div>Contact</div>
+        <div>
+          <a href="/edit-contact"><button class="btn">Edit</button></a>
+        </div>
+      </div>
 
   </div>
 
