@@ -15,6 +15,5 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 .env
-artisan
 server.php
 .DS_Store
