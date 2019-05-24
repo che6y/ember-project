@@ -8,27 +8,27 @@
 
   <div class="admin-container__output">
 
-      <div class="grid-row">
+      <div class="grid-row-3">
         <div>#</div>
         <div>Page</div>
         <div>Action</div>
       </div>
 
-      <div class="grid-row">
+      <div class="grid-row-3">
           <div scope="row">1</div>
           <div>About me</div>
           <div>
             <a href="/skills"><button class="btn">Edit</button></a>
           </div>
       </div>
-      <div class="grid-row">
+      <div class="grid-row-3">
         <div scope="row">2</div>
         <div>Portfolio</div>
         <div>
           <a href="/works"><button class="btn">Edit</button></a>
         </div>
       </div>
-      <div class="grid-row">
+      <div class="grid-row-3">
         <div scope="row">3</div>
         <div>Contact</div>
         <div>

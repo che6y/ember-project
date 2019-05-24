@@ -32,10 +32,18 @@
 
 	}
 
-	& .grid-row {
+	& .grid-row-3,
+	& .grid-row-4 {
 		display: grid;
 		grid-template-rows: 45px;
-		grid-template-columns: 15px 400px 105px;
+		align-items: center;
+	}
+
+	& .grid-row-3 {
+		grid-template-columns: 25px 400px 105px;
+	}
+	& .grid-row-4 {
+		grid-template-columns: 25px 180px 160px 100px;
 	}
 
 	& button {

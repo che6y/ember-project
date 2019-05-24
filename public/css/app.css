@@ -203,10 +203,19 @@ img {
   border-bottom: 1px solid #181a1f;
 }
 
-.admin-container .grid-row {
+.admin-container .grid-row-3,
+.admin-container .grid-row-4 {
   display: grid;
   grid-template-rows: 45px;
-  grid-template-columns: 15px 400px 105px;
+  align-items: center;
+}
+
+.admin-container .grid-row-3 {
+  grid-template-columns: 25px 400px 105px;
+}
+
+.admin-container .grid-row-4 {
+  grid-template-columns: 25px 180px 160px 100px;
 }
 
 .admin-container button {

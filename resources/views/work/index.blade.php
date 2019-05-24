@@ -15,14 +15,14 @@
         </a>
     </div>
 
-    <div class="grid-row">
+    <div class="grid-row-3">
         <div>#</div>
         <div>Title</div>
         <div>Action</div>
     </div>
 
     @for ( $i = 0; $i < count($works); ++$i )
-    <div class="grid-row">
+    <div class="grid-row-3">
       <div>{{ $i+1 }}</div>
       <div>{{ $works[$i]->title }}</div>
       <div>

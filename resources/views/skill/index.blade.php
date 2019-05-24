@@ -9,49 +9,37 @@
 
     <?php echo Breadcrumbs::render('skills'); ?>
 
-      <div>
+      <div class="add-new-item">
         <a href="/skills/create">
-          <button type="button" name="button" class="btn btn-outline-secondary btn-sm">
+          <button type="button" name="button" class="btn">
             Add new
           </button>
         </a>
       </div>
 
-      <table class="table table-bordered">
+      <div class="grid-row-4">
+        <div>#</div>
+        <div>Title</div>
+        <div>Position in list</div>
+        <div>Action</div>
+      </div>
+      @for ( $i = 0; $i < count( $skills ); ++$i )
+      <div class="grid-row-4">
+          <div>{{ $i }}</div>
+          <div>{{ $skills[$i]->title }}</div>
+          <div>{{ $skills[$i]->position }}</div>
+          <div>
+            <a href="/skills/edit/{{ $skills[$i]->id }}" class="edit-button"><button class="btn  ">Edit</button></a>
+            <form action="{{ url('/delete-skill', ['id' => $skills[$i]->id]) }}" method="POST" class="delete-form">
+              {{ method_field('DELETE') }}
 
-        <thead>
-        <tr>
-          <th>#</th>
-          <th>Title</th>
-          <th>Position in list</th>
-          <th>Action</th>
-        </tr>
-        </thead>
+              {{ csrf_field() }}
 
-        <tbody>
-
-        @for ($i=0; $i<count($skills); ++$i)
-          <tr>
-            <th scope="row">{{ $i+1 }}</th>
-            <td>{{ $skills[$i]->title }}</td>
-            <td>{{ $skills[$i]->position }}</td>
-            <td>
-              <a href="/skills/edit/{{ $skills[$i]->id }}" class="edit-button"><button class="btn  ">Edit</button></a>
-              <form action="{{ url('/delete-skill', ['id' => $skills[$i]->id]) }}" method="POST" class="delete-form">
-
-                {{ method_field('DELETE') }}
-
-                {{ csrf_field() }}
-
-                <button type="submit" class="btn  ">Delete</button>
-
-              </form>
-            </td>
-          </tr>
-        @endfor
-
-        </tbody>
-      </table>
+              <button type="submit" class="btn  ">Delete</button>
+            </form>
+          </div>
+        </div>
+      @endfor
 
   </div>
 
