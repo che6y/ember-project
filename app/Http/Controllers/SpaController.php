@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Work;
 use App\Skill;
-use App\Contact;
+use App\Term;
 
 class SpaController extends Controller
 {
