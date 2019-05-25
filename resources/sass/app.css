@@ -157,10 +157,12 @@ img {
     display: grid;
     grid-template-rows: 45px;
     align-items: center; }
+    .admin-container .grid-row-3 div:not(:nth-child(-n+2)), .admin-container .grid-row-4 div:not(:nth-child(-n+2)) {
+      text-align: center; }
   .admin-container .grid-row-3 {
     grid-template-columns: 25px 400px 105px; }
   .admin-container .grid-row-4 {
-    grid-template-columns: 25px 180px 160px 100px; }
+    grid-template-columns: 25px 180px 130px 130px; }
   .admin-container button {
     padding: 5px 7px; }
   .admin-container .breadcrumb {

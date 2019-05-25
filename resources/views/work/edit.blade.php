@@ -22,7 +22,8 @@
 
       <div class="form-group">
         <label for="exampleInputPassword1">Description</label><br />
-        <textarea type="text" class="form-control" name="description" rows="5" cols="33">{{ $work->description }}</textarea>
+        <textarea type="text" id="textarea-description" class="form-control" name="description" rows="5" cols="33">{{ $work->description
+        }}</textarea>
       </div>
 
       <button type="submit" class="btn">Update</button>
@@ -30,6 +31,5 @@
     </form>
 
   </div>
-
 </div>
 @endsection

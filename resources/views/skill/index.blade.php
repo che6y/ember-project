@@ -20,7 +20,7 @@
       <div class="grid-row-4">
         <div>#</div>
         <div>Title</div>
-        <div>Position in list</div>
+        <div>Position</div>
         <div>Action</div>
       </div>
       @for ( $i = 0; $i < count( $skills ); ++$i )

@@ -37,13 +37,17 @@
 		display: grid;
 		grid-template-rows: 45px;
 		align-items: center;
+
+		& div:not(:nth-child(-n+2)){
+			text-align: center;
+		}
 	}
 
 	& .grid-row-3 {
 		grid-template-columns: 25px 400px 105px;
 	}
 	& .grid-row-4 {
-		grid-template-columns: 25px 180px 160px 100px;
+		grid-template-columns: 25px 180px 130px 130px;
 	}
 
 	& button {
