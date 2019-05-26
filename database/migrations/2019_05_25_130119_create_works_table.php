@@ -17,7 +17,7 @@ class CreateWorksTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->mediumText('desciption');
-            $table->string('desciption');
+            $table->string('image_url');
             $table->timestamps();
         });
     }
