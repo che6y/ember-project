@@ -56,9 +56,12 @@ img {
   grid-template-columns: 250px auto;
   width: 100%;
   background-color: #21252b;
-  border-bottom: 1px solid #181a1f; }
+  border-bottom: 1px solid #181a1f;
+  grid-template-areas: "nav title";
+  justify-content: space-between; }
 
 .header__title {
+  grid-area: title;
   text-align: right;
   text-transform: uppercase; }
   .header__title a {
@@ -68,6 +71,7 @@ img {
     padding: 0 15px 0 0; }
 
 .header__nav {
+  grid-area: nav;
   align-self: end; }
   .header__nav-link {
     height: 30px;
@@ -88,7 +92,8 @@ img {
 
 @media (max-width: 575px) {
   .header {
-    height: 150px; } }
+    height: 100px;
+    grid-template-areas: "title" "nav"; } }
 .output {
   overflow: auto;
   padding: 15px;

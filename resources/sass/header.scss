@@ -6,9 +6,12 @@
 	width: 100%;
 	background-color: $bg-color-dark;
 	border-bottom: $border-dark;
+	grid-template-areas: "nav title";
+	justify-content: space-between;
 }
 
 .header__title {
+	grid-area: title;
 	text-align: right;
 	text-transform: uppercase;
 
@@ -21,6 +24,7 @@
 }
 
 .header__nav {
+	grid-area: nav;
 	align-self: end;
 
 	&-link {
@@ -48,6 +52,7 @@
 }
 @media (max-width: 575px) {
 	.header {
-		height: 150px;
+		height: 100px;
+		grid-template-areas: "title" "nav";
 	}
 }
