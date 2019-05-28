@@ -56,7 +56,7 @@ img {
   display: grid;
   grid-area: header;
   align-items: center;
-  grid-template-columns: 250px auto;
+  grid-template-columns: 300px auto;
   width: 100%;
   background-color: #21252b;
   border-bottom: 1px solid #181a1f;
@@ -105,6 +105,7 @@ img {
   background-color: #262931;
 }
 
+<<<<<<< HEAD
 @media (max-width: 575px) {
   .header {
     height: 100px;
@@ -112,6 +113,8 @@ img {
   }
 }
 
+=======
+>>>>>>> 12ad035da45d8138361105fab0ad6d33dfdda739
 .output {
   overflow: auto;
   padding: 15px;
@@ -160,18 +163,6 @@ img {
   background-color: #21252b;
   box-sizing: border-box;
   border: 1px solid #181a1f;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.footer__languages {
-  margin: auto 0;
-}
-
-.footer__languages-link {
-  padding: 0 10px 0 0;
-  text-transform: uppercase;
-  color: #9da5b3;
 }
 
 .admin-container {

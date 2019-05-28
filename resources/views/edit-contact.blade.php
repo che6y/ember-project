@@ -18,18 +18,18 @@
 
       <div class="form-group">
         <label for="my-email">Email</label>
-        <input type="text" class="form-control" id="my-email" name="email" value="{{ $contact->email }}">
+        <input type="text" class="form-control" id="my-email" name="email" value="{{ $email }}">
       </div>
 
       <div class="form-group">
         <label for="my-github">Github</label>
-        <input type="text" class="form-control" id="my-github" name="github" value="{{ $contact->github }}">
+        <input type="text" class="form-control" id="my-github" name="github" value="{{ $github }}">
       </div>
 
-      <div class="form-group">
-        <label for="my-codewars">Codewars</label>
-        <input type="text" class="form-control" id="my-codewars" name="codewars" value="{{ $contact->codewars }}">
-      </div>
+{{--      <div class="form-group">--}}
+{{--        <label for="my-codewars">Codewars</label>--}}
+{{--        <input type="text" class="form-control" id="my-codewars" name="codewars" value="{{ $contact->codewars }}">--}}
+{{--      </div>--}}
 
       <button type="submit" class="btn  ">Submit</button>
 
