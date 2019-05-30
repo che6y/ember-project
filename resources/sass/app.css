@@ -27,7 +27,7 @@ img {
   height: 850px;
   overflow: auto;
   margin: 50px auto;
-  background-color: #21252b;
+  background-color: #ccc9c4;
   border: 1px solid #181a1f;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -49,11 +49,14 @@ img {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px grey; }
 
+@media screen and (max-width: 575px) {
+  .container {
+    grid-template-rows: 100px auto 40px; } }
 .header {
   display: grid;
   grid-area: header;
   align-items: center;
-  grid-template-columns: 250px auto;
+  grid-template-columns: 300px 1fr;
   width: 100%;
   background-color: #21252b;
   border-bottom: 1px solid #181a1f;
@@ -93,7 +96,11 @@ img {
 @media (max-width: 575px) {
   .header {
     height: 100px;
-    grid-template-areas: "title" "nav"; } }
+    grid-template-areas: "title" "nav";
+    grid-template-columns: 1fr;
+    justify-content: center; }
+    .header .header__title {
+      text-align: center; } }
 .output {
   overflow: auto;
   padding: 15px;
@@ -126,15 +133,7 @@ img {
   width: 100%;
   background-color: #21252b;
   box-sizing: border-box;
-  border: 1px solid #181a1f;
-  display: flex;
-  justify-content: flex-end; }
-  .footer__languages {
-    margin: auto 0; }
-    .footer__languages-link {
-      padding: 0 10px 0 0;
-      text-transform: uppercase;
-      color: #9da5b3; }
+  border: 1px solid #181a1f; }
 
 .admin-container {
   display: block;

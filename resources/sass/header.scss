@@ -2,7 +2,7 @@
 	display: grid;
 	grid-area: header;
 	align-items: center;
-	grid-template-columns: 300px auto;
+	grid-template-columns: 300px 1fr;
 	width: 100%;
 	background-color: $bg-color-dark;
 	border-bottom: $border-dark;
@@ -51,12 +51,14 @@
 	}
 }
 @media (max-width: 575px) {
-<<<<<<< HEAD
 	.header {
 		height: 100px;
 		grid-template-areas: "title" "nav";
-	}
-=======
+		grid-template-columns: 1fr;
+		justify-content: center;
 
->>>>>>> 12ad035da45d8138361105fab0ad6d33dfdda739
+		& .header__title {
+			text-align: center;
+		}
+	}
 }
