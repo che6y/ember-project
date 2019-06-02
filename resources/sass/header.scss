@@ -52,9 +52,10 @@
 }
 @media (max-width: 575px) {
 	.header {
-		height: 100px;
+		height: 70px;
 		grid-template-areas: "title" "nav";
 		grid-template-columns: 1fr;
+		grid-template-rows: 40px 27px;
 		justify-content: center;
 
 		& .header__title {
