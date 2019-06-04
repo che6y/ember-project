@@ -43,23 +43,33 @@
 			border-top: $border-dark;
 		}
 
-		&.active {
+		&.active{
 			border-bottom: 5px solid $bg-color-main;
 			background-color: $bg-color-main;
 		}
-
 	}
 }
+
 @media (max-width: 575px) {
 	.header {
-		height: 70px;
+		height: 75px;
 		grid-template-areas: "title" "nav";
 		grid-template-columns: 1fr;
-		grid-template-rows: 40px 27px;
+		grid-template-rows: 40px 35px;
 		justify-content: center;
 
 		& .header__title {
 			text-align: center;
+		}
+
+		& .header__nav {
+			width: 100%;
+
+			&-link {
+				display: inline-block;
+				width: 33.33%;
+				height: 35px;
+			}
 		}
 	}
 }

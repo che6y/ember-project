@@ -1,8 +1,6 @@
 <template>
     <div>
-        <p>
-            <span class="h4">{{ item.title }}</span>
-        </p>
+        <h4>{{ item.title }}</h4>
         <p>
             {{ item.description }}
         </p>

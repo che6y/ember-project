@@ -62,7 +62,7 @@ img {
 
 @media screen and (max-width: 575px) {
 	.container {
-		grid-template-rows: 70px auto $footer-height;
+		grid-template-rows: 75px auto $footer-height;
 		margin: auto;
 	}
 }
