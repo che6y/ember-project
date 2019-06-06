@@ -44,9 +44,65 @@ img {
 		"header"
 		"content"
 		"footer";
-
-
 }
+.output {
+	overflow: auto;
+	padding: 15px;
+	background-color: $bg-color-main;
+
+	li {
+		list-style: none;
+	}
+
+	h4 {
+		font-size: 1.2em;
+		line-height: 1.3em;
+		margin: 10px 0 15px 0;
+	}
+
+	a {
+		color: $color-sidebar;
+	}
+}
+.portfolio-output {
+	display: grid;
+	grid-template-columns: 250px 1fr;
+
+	& .portfolio_item {
+		display: none;
+		margin: 15px;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	& .sidebar__nav {
+		height: 100%;
+		padding: 15px;
+		border-right: $border-dark;
+
+		&-link {
+			display: block;
+			padding: 10px 0;
+
+			a {
+				color: $color-sidebar;
+			}
+
+			& a:hover, & a:active {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.portfolio-output {
+		grid-template-columns: 1fr;
+	}
+}
+
 
 ::-webkit-scrollbar {
     width: 12px;
