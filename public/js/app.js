@@ -2011,36 +2011,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['skills', 'works'],
-  data: function data() {
-    return {
-      currentTab: 'Portfolio',
-      tabs: ['About', 'Portfolio', 'Contact']
-    };
-  },
-  computed: {
-    currentTabComponent: function currentTabComponent() {
-      return 'tab-' + this.currentTab.toLowerCase();
-    }
-  }
+  props: ['skills', 'works']
 });
 
 /***/ }),
@@ -38052,15 +38024,11 @@ var staticRenderFns = [
     return _c("div", { staticClass: "output" }, [
       _c("p", [_c("a", { attrs: { href: "" } }, [_vm._v("My email")])]),
       _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
       _c("p", [
         _c("a", { attrs: { href: "", download: "" } }, [
           _vm._v("Download my CV")
         ])
-      ]),
-      _vm._v(" "),
-      _c("br")
+      ])
     ])
   }
 ]
@@ -38197,52 +38165,16 @@ var render = function() {
     "div",
     { staticClass: "container" },
     [
-      _c("header", { staticClass: "header" }, [
-        _c(
-          "nav",
-          { staticClass: "header__nav row align-items-end" },
-          _vm._l(_vm.tabs, function(tab) {
-            return _c(
-              "a",
-              {
-                key: tab,
-                class: ["header__nav-link", { active: _vm.currentTab === tab }],
-                on: {
-                  click: function($event) {
-                    _vm.currentTab = tab
-                  }
-                }
-              },
-              [_vm._v(_vm._s(tab))]
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _vm._m(0)
-      ]),
+      _c("about-me", { attrs: { skills: _vm.skills } }),
       _vm._v(" "),
-      _c(_vm.currentTabComponent, {
-        tag: "component",
-        staticClass: "tab",
-        attrs: { skills: _vm.skills, works: _vm.works }
-      }),
+      _c("portfolio", { attrs: { works: _vm.works } }),
       _vm._v(" "),
-      _c("footer", { staticClass: "footer" })
+      _c("contact")
     ],
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "header__title" }, [
-      _c("h2", [_c("a", { attrs: { href: "/" } }, [_vm._v("Site Name")])])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -50395,9 +50327,9 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-Vue.component('tab-about', __webpack_require__(/*! ./components/AboutMe.vue */ "./resources/js/components/AboutMe.vue")["default"]);
-Vue.component('tab-portfolio', __webpack_require__(/*! ./components/Portfolio.vue */ "./resources/js/components/Portfolio.vue")["default"]);
-Vue.component('tab-contact', __webpack_require__(/*! ./components/Contact.vue */ "./resources/js/components/Contact.vue")["default"]);
+Vue.component('about-me', __webpack_require__(/*! ./components/AboutMe.vue */ "./resources/js/components/AboutMe.vue")["default"]);
+Vue.component('portfolio', __webpack_require__(/*! ./components/Portfolio.vue */ "./resources/js/components/Portfolio.vue")["default"]);
+Vue.component('contact', __webpack_require__(/*! ./components/Contact.vue */ "./resources/js/components/Contact.vue")["default"]);
 Vue.component('vue-page', __webpack_require__(/*! ./components/VuePage.vue */ "./resources/js/components/VuePage.vue")["default"]);
 Vue.component('portfolio-item', __webpack_require__(/*! ./components/PortfolioItem.vue */ "./resources/js/components/PortfolioItem.vue")["default"]);
 var app = new Vue({
