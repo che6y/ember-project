@@ -1,5 +1,6 @@
 <template>
-	<div class="single-page-container">
+	<div id="fullpage" class="single-page-container">
+
 		<about-me :skills="skills" :sectionHeight="sectionHeight"></about-me>
 
 		<portfolio :works="works" :sectionHeight="sectionHeight"></portfolio>
@@ -12,7 +13,9 @@
 		props: ['skills', 'works'],
 		data() {
 			return {
-				sectionHeight: window.innerHeight
+				sectionHeight: window.innerHeight,
+				scrollPos	 : (document.body.getBoundingClientRect()).top,
+				activeSection: 0
 			}
 		},
 		methods: {
@@ -20,14 +23,19 @@
 				this.sectionHeight = window.innerHeight;
 			},
 			handleScroll () {
-				// if ( window.scrollY > (this.sectionHeight /2 ) && window.scrollY < (this.sectionHeight + this.sectionHeight / 2
-				// ) ) {
-				// 	window.scrollTo(0, this.sectionHeight + 1);
-				// } else if (window.scrollY >= (this.sectionHeight + this.sectionHeight / 2 )){
-				// 	window.scrollTo(0, this.sectionHeight * 2 + 1);
-				// } else {
-				// 	window.scrollTo(0, 0);
-				// }
+				if ((document.body.getBoundingClientRect()).top > this.scrollPos){
+					this.activeSection -= this.sectionHeight;
+					window.scroll(0, this.activeSection);
+					console.log('UP');
+				} else if ((document.body.getBoundingClientRect()).top < this.scrollPos){
+					console.log('DOWN');
+					this.activeSection += this.sectionHeight;
+					window.scroll(0, this.activeSection);
+				} else {
+
+				}
+
+				this.scrollPos = (document.body.getBoundingClientRect()).top;
 			}
 		},
 		created () {
