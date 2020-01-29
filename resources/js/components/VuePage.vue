@@ -14,8 +14,10 @@
 		data() {
 			return {
 				sectionHeight: window.innerHeight,
-				scrollPos	 : (document.body.getBoundingClientRect()).top,
-				activeSection: 0
+				initialPos	 : window.pageYOffset || document.documentElement.scrollTop,
+				activeSection: 0,
+				sections	 : ['about-me','portfolio','contact'],
+				sectionChanged: false
 			}
 		},
 		methods: {
@@ -23,19 +25,49 @@
 				this.sectionHeight = window.innerHeight;
 			},
 			handleScroll () {
-				if ((document.body.getBoundingClientRect()).top > this.scrollPos){
-					this.activeSection -= this.sectionHeight;
-					window.scroll(0, this.activeSection);
-					console.log('UP');
-				} else if ((document.body.getBoundingClientRect()).top < this.scrollPos){
-					console.log('DOWN');
-					this.activeSection += this.sectionHeight;
-					window.scroll(0, this.activeSection);
+				// this.scrollFunc();
+
+				console.log(this.activeSection);
+				let scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+				let currentSection = document.getElementById(this.sections[this.activeSection]);
+				let curSecPosition = currentSection.offsetTop;
+
+
+				if ( this.initialPos > scrollPos ) {
+					console.log('up');
+					if ( scrollPos < (curSecPosition + this.sectionHeight*0.6 ) && !this.sectionChanged){
+						console.log('next section');
+						this.activeSection -= 1;
+						this.sectionChanged = true;
+						let currentSection = document.getElementById(this.sections[this.activeSection]);
+						this.scrollFunc( currentSection.offsetTop );
+
+					}
+
 				} else {
+					console.log('down', );
+					if ( scrollPos > (curSecPosition + this.sectionHeight*0.3 ) && !this.sectionChanged){
+						console.log('next section');
+						this.activeSection += 1;
+						this.sectionChanged = true;
+						let currentSection = document.getElementById(this.sections[this.activeSection]);
+						this.scrollFunc( currentSection.offsetTop );
+
+					}
 
 				}
 
-				this.scrollPos = (document.body.getBoundingClientRect()).top;
+
+				this.initialPos = window.pageYOffset || document.documentElement.scrollTop;
+			},
+			scrollFunc ( curSecPosition ) {
+				window.scroll({
+					top: curSecPosition,
+					left: 0,
+					behaviour: 'smooth'
+				});
+				this.sectionChanged = false;
 			}
 		},
 		created () {

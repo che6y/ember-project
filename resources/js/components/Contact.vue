@@ -1,6 +1,6 @@
 <template>
 	<div data-y-offset="{ offset }" id="section-contact-me">
-		<section class="contact" v-bind:style="{ height: sectionHeight + 'px' }">
+		<section id="contact" class="contact" v-bind:style="{ height: sectionHeight + 'px' }">
 			<p>
 				<a href="">My email</a>
 			</p>

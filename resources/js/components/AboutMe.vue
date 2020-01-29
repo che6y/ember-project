@@ -1,6 +1,6 @@
 <template>
 	<div data-y-offset="{ offset }" id="section-about-me">
-		<section class="about-me" v-bind:style="{ height: sectionHeight + 'px' }"  >
+		<section id="about-me" class="about-me" v-bind:style="{ height: sectionHeight + 'px' }"  >
 			<h4>{{ message }}</h4>
 			<h4>Skills:</h4>
 			<ul>
@@ -15,9 +15,9 @@
 		props: ['skills', 'sectionHeight'],
         data() {
             return {
-                message: "Hello, my name is Anastasiia and I'm a web developer",
-				items: [],
-				offset: null
+                message	: "Hello, my name is Anastasiia and I'm a web developer",
+				items	: [],
+				offset	: null
             }
         },
 		methods: {

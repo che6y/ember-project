@@ -2025,8 +2025,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       sectionHeight: window.innerHeight,
-      scrollPos: document.body.getBoundingClientRect().top,
-      activeSection: 0
+      initialPos: window.pageYOffset || document.documentElement.scrollTop,
+      activeSection: 0,
+      sections: ['about-me', 'portfolio', 'contact'],
+      sectionChanged: false
     };
   },
   methods: {
@@ -2034,17 +2036,47 @@ __webpack_require__.r(__webpack_exports__);
       this.sectionHeight = window.innerHeight;
     },
     handleScroll: function handleScroll() {
-      if (document.body.getBoundingClientRect().top > this.scrollPos) {
-        this.activeSection -= this.sectionHeight;
-        window.scroll(0, this.activeSection);
-        console.log('UP');
-      } else if (document.body.getBoundingClientRect().top < this.scrollPos) {
-        console.log('DOWN');
-        this.activeSection += this.sectionHeight;
-        window.scroll(0, this.activeSection);
-      } else {}
+      // this.scrollFunc();
+      console.log(this.activeSection);
+      var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+      var currentSection = document.getElementById(this.sections[this.activeSection]);
+      var curSecPosition = currentSection.offsetTop;
 
-      this.scrollPos = document.body.getBoundingClientRect().top;
+      if (this.initialPos > scrollPos) {
+        console.log('up');
+
+        if (scrollPos < curSecPosition + this.sectionHeight * 0.6 && !this.sectionChanged) {
+          console.log('next section');
+          this.activeSection -= 1;
+          this.sectionChanged = true;
+
+          var _currentSection = document.getElementById(this.sections[this.activeSection]);
+
+          this.scrollFunc(_currentSection.offsetTop);
+        }
+      } else {
+        console.log('down');
+
+        if (scrollPos > curSecPosition + this.sectionHeight * 0.3 && !this.sectionChanged) {
+          console.log('next section');
+          this.activeSection += 1;
+          this.sectionChanged = true;
+
+          var _currentSection2 = document.getElementById(this.sections[this.activeSection]);
+
+          this.scrollFunc(_currentSection2.offsetTop);
+        }
+      }
+
+      this.initialPos = window.pageYOffset || document.documentElement.scrollTop;
+    },
+    scrollFunc: function scrollFunc(curSecPosition) {
+      window.scroll({
+        top: curSecPosition,
+        left: 0,
+        behaviour: 'smooth'
+      });
+      this.sectionChanged = false;
     }
   },
   created: function created() {
@@ -37984,7 +38016,8 @@ var render = function() {
         "section",
         {
           staticClass: "about-me",
-          style: { height: _vm.sectionHeight + "px" }
+          style: { height: _vm.sectionHeight + "px" },
+          attrs: { id: "about-me" }
         },
         [
           _c("h4", [_vm._v(_vm._s(_vm.message))]),
@@ -38031,7 +38064,11 @@ var render = function() {
     [
       _c(
         "section",
-        { staticClass: "contact", style: { height: _vm.sectionHeight + "px" } },
+        {
+          staticClass: "contact",
+          style: { height: _vm.sectionHeight + "px" },
+          attrs: { id: "contact" }
+        },
         [_vm._m(0), _vm._v(" "), _vm._m(1)]
       )
     ]
@@ -38077,7 +38114,11 @@ var render = function() {
   return _c("div", [
     _c(
       "section",
-      { staticClass: "portfolio", style: { height: _vm.sectionHeight + "px" } },
+      {
+        staticClass: "portfolio",
+        style: { height: _vm.sectionHeight + "px" },
+        attrs: { id: "portfolio" }
+      },
       _vm._l(_vm.items, function(item) {
         return _c("portfolio-item", {
           key: item.id,

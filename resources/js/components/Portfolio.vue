@@ -1,6 +1,6 @@
 <template>
 	<div>
-        <section class="portfolio" v-bind:style="{ height: sectionHeight + 'px' }">
+        <section id="portfolio" class="portfolio" v-bind:style="{ height: sectionHeight + 'px' }">
             <portfolio-item
                     v-for="item in items"
                     class="portfolio-item"
