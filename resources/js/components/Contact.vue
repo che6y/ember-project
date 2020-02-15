@@ -1,6 +1,6 @@
 <template>
 	<div data-y-offset="{ offset }" id="section-contact-me">
-		<section id="contact" class="contact" v-bind:style="{ height: sectionHeight + 'px' }">
+		<section id="contact" class="contact">
 			<p>
 				<a href="">My email</a>
 			</p>
@@ -11,20 +11,11 @@
 		</section>
 	</div>
 </template>
-<script>
-	export default {
-		props: ['sectionHeight'],
-		data() {
-			return {
-				offset: null
-			}
-		},
-		mounted() {
-			var d = document.getElementById('section-contact-me');
-			this.offset = d.offsetTop;
-		},
-	}
-</script>
 <style scoped>
-
+	section:before {
+		display: block;
+		content: "";
+		height: 75px;
+		margin: -75px 0 0;
+	}
 </style>

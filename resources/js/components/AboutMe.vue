@@ -1,6 +1,6 @@
 <template>
 	<div data-y-offset="{ offset }" id="section-about-me">
-		<section id="about-me" class="about-me" v-bind:style="{ height: sectionHeight + 'px' }"  >
+		<section id="about-me" class="about-me">
 			<h4>{{ message }}</h4>
 			<h4>Skills:</h4>
 			<ul>
@@ -12,22 +12,17 @@
 
 <script>
     export default {
-		props: ['skills', 'sectionHeight'],
+		props: ['skills'],
         data() {
             return {
                 message	: "Hello, my name is Anastasiia and I'm a web developer",
 				items	: [],
-				offset	: null
             }
         },
 		methods: {
 			decodeData(){
 				this.items =  JSON.parse(window.atob(this.skills));
 			}
-		},
-		mounted() {
-			var d = document.getElementById('section-about-me');
-			this.offset = d.offsetTop;
 		},
         created() {
 			this.decodeData();
@@ -37,5 +32,11 @@
 <style scoped>
 	li {
 		text-indent: 20px;
+	}
+	section:before {
+		display: block;
+		content: "";
+		height: 75px;
+		margin: -75px 0 0;
 	}
 </style>

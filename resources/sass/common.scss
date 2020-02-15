@@ -7,6 +7,9 @@
 html {
 	line-height: 1.5em;
 	touch-action: manipulation;
+	background-color: #343a40;
+	color: #fff;
+	height: 100%;
 }
 
 body {
@@ -14,16 +17,11 @@ body {
 	height: 100%;
 }
 
-img {
-
+a {
+	text-decoration: none;
+	color: #fff;
 }
 
-.container {
-
-}
-.output {
-
-}
-.portfolio-output {
-
+.container, #app, .main, .main > div {
+	height: 100%;
 }

@@ -1,6 +1,6 @@
 <template>
 	<div>
-        <section id="portfolio" class="portfolio" v-bind:style="{ height: sectionHeight + 'px' }">
+        <section id="portfolio" class="portfolio">
             <portfolio-item
                     v-for="item in items"
                     class="portfolio-item"
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    props: ['works', 'sectionHeight'],
+    props: ['works'],
     data() {
         return {
             items: []
@@ -30,5 +30,10 @@ export default {
 }
 </script>
 <style scoped>
-
+    section:before {
+        display: block;
+        content: "";
+        height: 75px;
+        margin: -75px 0 0;
+    }
 </style>
