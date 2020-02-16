@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
-use App\Work;
 
-class WorkController extends Controller
+class ContactController extends Controller
 {
-
     /**
      * Create a new controller instance.
      *
@@ -17,18 +16,17 @@ class WorkController extends Controller
     {
         $this->middleware('auth');
     }
+
     /**
-     * Display a listing of the resource.
+     * Show all contacts.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $works = Work::latest()->get();
-
-        return view('admin/work.index', compact('works'));
+        $contacts = Contact::all();
+        return view('admin/contact.index', compact( 'contacts' ));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -36,7 +34,7 @@ class WorkController extends Controller
      */
     public function create()
     {
-        return view('admin/work.create');
+        return view('admin/contact.create');
     }
 
     /**
@@ -47,9 +45,9 @@ class WorkController extends Controller
      */
     public function store()
     {
-        Work::create(request(['title', 'description']));
+        Contact::create(request(['title','position']));
 
-        return redirect('/works');
+        return redirect('contacts');
     }
 
     /**
@@ -61,9 +59,9 @@ class WorkController extends Controller
     public function edit($id)
     {
 
-      $work = Work::find($id);
+        $contact =Contact::find($id);
 
-      return view('admin/work.edit', compact('work'));
+        return view('admin/contact.edit', compact('contact'));
     }
 
     /**
@@ -75,13 +73,13 @@ class WorkController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $work = Work::find($id);
+        $contact = Contact::find($id);
 
-      $work->title = $request->title;
-      $work->description = $request->description;
-      $work->save();
+        $contact->title = $request->title;
+        $contact->position = $request->position;
+        $contact->save();
 
-      return redirect('/works');
+        return redirect('contacts');
 
     }
 
@@ -93,7 +91,8 @@ class WorkController extends Controller
      */
     public function destroy($id)
     {
-        Work::destroy($id);
+
+        Contact::destroy($id);
         return back();
     }
 }

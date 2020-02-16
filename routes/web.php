@@ -24,9 +24,11 @@ Route::get('/works/edit/{id}',['uses' => 'WorkController@edit', 'as' => 'work'])
 Route::put('/update-work/{id}','WorkController@update');
 Route::delete('/delete-work/{id}','WorkController@destroy');
 
-Route::get('/edit-contact',['uses' => 'TermController@edit', 'as' => 'edit-contact']);
-Route::put('/update-contact',['uses' => 'TermController@update', 'as' => 'contact-update']);
-Route::get('/adminka', 'HomeController@index')->name('home');
+Route::get('/contacts',['uses' => 'ContactController@index', 'as' => 'contacts']);
+Route::put('/update-contact',['uses' => 'ContactController@update', 'as' => 'contact-update']);
+Route::get('/edit-contact',['uses' => 'ContactController@edit', 'as' => 'edit-contact']);
+
+Route::get('/adminka', 'AdminController@index')->name('home');
 
 Auth::routes();
 

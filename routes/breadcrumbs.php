@@ -8,7 +8,7 @@ Breadcrumbs::register('home', function ($breadcrumbs) {
 // Home > Contact
 Breadcrumbs::register('contact', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Contact', route('edit-contact'));
+    $breadcrumbs->push('Contact', route('contacts'));
 });
 
 // Home > Works
