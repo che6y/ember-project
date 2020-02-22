@@ -50423,6 +50423,9 @@ Vue.component('portfolio-item', __webpack_require__(/*! ./components/PortfolioIt
 var app = new Vue({
   el: '#app'
 });
+tinymce.init({
+  selector: 'textarea'
+});
 
 /***/ }),
 

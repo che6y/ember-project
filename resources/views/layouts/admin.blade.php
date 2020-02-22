@@ -13,10 +13,6 @@
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-
-    {{--<script>tinymce.init({selector:'textarea'});</script>--}}
-
 </head>
 <body>
     <div id="app">
@@ -24,6 +20,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdn.tiny.cloud/1/{{ env('TMCEKEY'), 'no-api-key' }}/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

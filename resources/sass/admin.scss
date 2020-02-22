@@ -2,23 +2,25 @@
 
 .admin-container {
 	display: block;
-	height: 720px;
+	height: 100%;
+	min-width: 320px;
+	width: 100%;
+	max-width: 920px;
+	margin: 25px auto;
 
 	& .header {
 		height: 50px;
 		width: auto;
 		padding: 10px 15px;
-		//background-color: $bg-color-main;
-		//border-bottom: $border-dark;
 	}
 
 	&__output {
-		padding: 15px;
+		padding: 15px 0;
 	}
 
-	& a {
+	& a, & a:visited, & a:hover, & a:active {
+		color: #000;
 		text-decoration: none;
-		//color: $color-main;
 
 		&:hover {
 			text-decoration: underline;
@@ -29,7 +31,6 @@
 		display: block;
 		padding: 0 0 10px 0;
 		margin: 0 0 20px 0;
-		//border-bottom: $border-dark;
 
 	}
 
@@ -45,10 +46,10 @@
 	}
 
 	& .grid-row-3 {
-		grid-template-columns: 25px 400px 105px;
+		grid-template-columns: 30px 400px 105px;
 	}
 	& .grid-row-4 {
-		grid-template-columns: 25px 180px 130px 130px;
+		grid-template-columns: 30px 180px 130px 130px;
 	}
 
 	& button {
@@ -62,9 +63,6 @@
 			//color: $color-tag;
 			list-style: none;
 			display: inline;
-			a {
-				//color: $color-tag;
-			}
 			&.active {
 				text-decoration: underline;
 			}

@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Mono);.admin-container {
   display: block;
-  height: 720px;
+  height: 100%;
+  min-width: 320px;
+  width: 100%;
+  max-width: 920px;
+  margin: 25px auto;
 }
 
 .admin-container .header {
@@ -10,14 +14,21 @@
 }
 
 .admin-container__output {
-  padding: 15px;
+  padding: 15px 0;
 }
 
-.admin-container a {
+.admin-container a,
+.admin-container a:visited,
+.admin-container a:hover,
+.admin-container a:active {
+  color: #000;
   text-decoration: none;
 }
 
-.admin-container a:hover {
+.admin-container a:hover,
+.admin-container a:visited:hover,
+.admin-container a:hover:hover,
+.admin-container a:active:hover {
   text-decoration: underline;
 }
 
@@ -40,11 +51,11 @@
 }
 
 .admin-container .grid-row-3 {
-  grid-template-columns: 25px 400px 105px;
+  grid-template-columns: 30px 400px 105px;
 }
 
 .admin-container .grid-row-4 {
-  grid-template-columns: 25px 180px 130px 130px;
+  grid-template-columns: 30px 180px 130px 130px;
 }
 
 .admin-container button {

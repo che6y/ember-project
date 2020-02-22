@@ -11,3 +11,5 @@ Vue.component('portfolio-item', require('./components/PortfolioItem.vue').defaul
 const app = new Vue({
     el: '#app'
 });
+
+tinymce.init({ selector:'textarea' });
